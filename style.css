@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    background-color: hsl(180, 100%, 98%);
+}
+#navquizimg{
+    width: 70px;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between ;
+  align-items: center;
+  background-color: rgb(190, 190, 190);
+  padding: 10px;
+}
+.navbuttons{
+    gap:0px;
+}
