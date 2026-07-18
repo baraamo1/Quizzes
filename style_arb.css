@@ -64,16 +64,14 @@ font-weight: 700;
 transition: 0.3s;
 overflow: hidden;
 }
-a{
-    text-decoration: none;
-}
+
 #languages:hover{
     background-color: rgb(255, 255, 255);
     height: 150px;
     color: #000;
     border: #000 3px solid;
 }
-#eng{
+#arb{
     background: #000;
     color: #fff;
 }
