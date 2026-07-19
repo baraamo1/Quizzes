@@ -106,8 +106,15 @@ a{
 }
 .catname{
     text-align: center;
-    font-size: clamp(30px,2vw,70px);
+    font-size: 24px;
     margin: 0px;
+    
+
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+
 }
 .catimg{
     width: 50px;
