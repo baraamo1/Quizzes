@@ -6,13 +6,28 @@ let next = document.getElementById("next");
 let rightAnswers ;
 let wrongAnswer ;
 let selectedAnswer = "";
-let answer = Math.floor(
-    Math.random()*4;
-)
+let rananswer1 = Math.floor(Math.random() * 4 )
+let rananswer2 = Math.floor(Math.random() * 4 )
+let rananswer3 = Math.floor(Math.random() * 4 )
+let rananswer4 = Math.floor(Math.random() * 4 )
 
-console.log(answer)
+console.log(rananswer1,rananswer2,rananswer3,rananswer4)
+//function randomAnswer (){
+    let ans = [0 , 1 , 2 , 3]
+    if(rananswer1 == ans[rananswer1] && rananswer2 == ans[rananswer2] &&rananswer3 == ans[rananswer3] && rananswer4 == ans[rananswer4]){
+        console.log("yes")
+    }
+//}
 
 
+
+
+
+
+
+
+
+/*
 answer1.onclick = function(){
 
 
@@ -55,3 +70,4 @@ function checkRightAnswer(){
 
 }
 
+*/
