@@ -1,0 +1,20 @@
+#backbutton{
+    background-color: #fff;
+    border: #000 3px solid;
+    border-radius: 15px;
+    font-size: 30px;
+    padding: 10px 30px;
+    box-shadow: #000 4px 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#backbutton:hover{
+    transform: scale(1.1);
+}
+#backbutton:active{
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+h1{
+    text-align: center;
+}
