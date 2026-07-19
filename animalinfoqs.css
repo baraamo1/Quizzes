@@ -35,7 +35,7 @@ padding: 10px;
 }
 #mainqs{
     margin:auto;
-font-size: 50px;
+font-size: 40px;
 }
 .answerbutton{
     font-size: 50px;
@@ -64,4 +64,22 @@ font-size: 50px;
       transform: translate(4px, 4px);
       box-shadow: none;
     
+}
+#next{
+display: flex;
+font-size: 40px;
+background-color: #000;
+color: #fff;
+padding: 10px;
+border:none ;
+border-radius: 20px;
+transition: 0.3s;
+float: right;
+margin: 30px;
+}
+#next:hover{
+    transform: scale(1.1);
+}
+#next:active{
+    transform: scale(1);
 }
