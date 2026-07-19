@@ -10,13 +10,70 @@ let rananswer1 = Math.floor(Math.random() * 4 )
 let rananswer2 = Math.floor(Math.random() * 4 )
 let rananswer3 = Math.floor(Math.random() * 4 )
 let rananswer4 = Math.floor(Math.random() * 4 )
-
-console.log(rananswer1,rananswer2,rananswer3,rananswer4)
+let quiz = true;
+//console.log(rananswer1,rananswer2,rananswer3,rananswer4)
 //function randomAnswer (){
-    let ans = [0 , 1 , 2 , 3]
-    if(rananswer1 == ans[rananswer1] && rananswer2 == ans[rananswer2] &&rananswer3 == ans[rananswer3] && rananswer4 == ans[rananswer4]){
-        console.log("yes")
+    
+
+
+
+
+
+
+
+
+ if(rananswer2 == rananswer1){
+    if(rananswer1 == 0){
+        rananswer1++
+    }else if(rananswer1 == 1){
+        rananswer1 - 1 || rananswer1 ++ || rananswer1 +2
+    }else if(rananswer1 == 2){
+        rananswer1 - 2 || rananswer1 - 1 || rananswer1 ++
+    }else if(rananswer1 == 3){
+        rananswer1 - 3 || rananswer1 - 2 || rananswer1 - 1
     }
+ }
+
+
+
+
+
+    if(rananswer1 == 0){
+        answer1.textContent = "Giraphe"
+    }else if(rananswer1 == 1){
+        answer2.textContent = "Bear"
+    }else if(rananswer1 == 2){
+        answer3.textContent = "Lion"
+    }else if(rananswer1 == 3){
+        answer4.textContent = "Elephant"
+    }
+
+
+ 
+
+  
+    
+ 
+
+  
+    
+ 
+
+    if(rananswer2 == 0 && rananswer2 != rananswer1){
+        
+        answer1.textContent = "Bear"
+    }else if(rananswer2 == 1 && rananswer2 != rananswer1){
+        answer2.textContent = "Lion"
+    }else if(rananswer2 == 2 && rananswer2 != rananswer1){
+        answer3.textContent = "Elephant"
+    }else if(rananswer2 == 3 && rananswer2 != rananswer1){
+        answer4.textContent = "Giraphe"
+    }
+
+
+
+
+console.log(rananswer1,rananswer2)
 //}
 
 
