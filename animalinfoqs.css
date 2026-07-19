@@ -1,0 +1,67 @@
+body{
+    margin: 0%;
+}
+.infobar{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 4px solid ;
+    font-size: 19px;
+    align-items: center;
+}
+.info{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+#correct{
+background-color: rgb(70, 202, 70);
+border-radius: 7px;
+padding: 10px;
+
+}
+#wrong{
+background-color: rgb(202, 70, 70);
+border-radius: 7px;
+padding: 10px;
+
+}
+#qnum{
+    font-size: 40px;
+    margin: 20px;
+}
+.mainbody{
+    display: flex;
+    align-items: center;
+}
+#mainqs{
+    margin:auto;
+font-size: 50px;
+}
+.answerbutton{
+    font-size: 50px;
+}
+.answers{
+    text-align: center;
+    margin: 20px;
+    
+}
+.answerbutton{
+    margin: 20px;
+    background-color: #fff;
+    border: 2px solid;
+    border-radius: 15px;
+    box-shadow: 4px 4px;
+    transition: 0.3s;
+
+}
+.answerbutton:hover{
+    transform: scale(1.15);
+
+}
+.answerbutton:active{
+        transform: scale(1);
+
+      transform: translate(4px, 4px);
+      box-shadow: none;
+    
+}
