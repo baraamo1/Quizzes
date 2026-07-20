@@ -13,6 +13,9 @@ body{
     gap: 50px;
     align-items: center;
 }
+.ysno{
+    visibility: hidden;
+}
 #correct{
 background-color: rgb(70, 202, 70);
 border-radius: 7px;
@@ -82,4 +85,7 @@ margin: 30px;
 }
 #next:active{
     transform: scale(1);
+}
+#yourAnswer{
+    font-size: larger;
 }
