@@ -55,7 +55,7 @@ font-size: 40px;
     border-radius: 15px;
     box-shadow: 4px 4px;
     transition: 0.3s;
-
+    display: none;
 }
 .answerbutton:hover{
     transform: scale(1.15);
@@ -88,4 +88,23 @@ margin: 30px;
 }
 #yourAnswer{
     font-size: larger;
+}
+#back{
+    display: flex;
+font-size: 40px;
+background-color: #000;
+color: #fff;
+padding: 10px;
+border:none ;
+border-radius: 20px;
+transition: 0.3s;
+float: left;
+margin: 30px;
+display:none;
+}
+#back:hover{
+    transform: scale(1.1);
+}
+#back:active{
+    transform: scale(1);
 }

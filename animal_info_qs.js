@@ -3,6 +3,7 @@ let answer2 = document.getElementById("answer2");
 let answer3 = document.getElementById("answer3");
 let answer4 = document.getElementById("answer4");
 let next = document.getElementById("next");
+let back = document.getElementById("back");
 let rightAnswers = 0;
 let wrongAnswer = 0;
 let selectedAnswer = "";
@@ -16,7 +17,7 @@ let allAnswers1 = ["Lion", "Tiger", "Elephant", "Giraffe", "Zebra", "Cheetah", "
 let allAnswers2 = ["Lion", "Tiger", "Elephant", "Giraffe", "Zebra", "Cheetah", "Leopard", "Wolf", "Fox", "Bear", "Panda", "Kangaroo", "Koala", "Monkey", "Gorilla", "Chimpanzee", "Hippopotamus", "Rhinoceros", "Camel", "Horse", "Donkey", "Cow", "Goat", "Sheep", "Pig", "Dog", "Cat", "Rabbit", "Deer", "Squirrel", "Mouse", "Bat", "Eagle", "Owl", "Falcon", "Penguin", "Ostrich", "Parrot", "Flamingo", "Crocodile", "Snake", "Turtle", "Chameleon", "Octopus", "Shark", "Dolphin", "Whale", "Blue Whale", "Jellyfish", "Platypus"]
 let allAnswers3 = ["Lion", "Tiger", "Elephant", "Giraffe", "Zebra", "Cheetah", "Leopard", "Wolf", "Fox", "Bear", "Panda", "Kangaroo", "Koala", "Monkey", "Gorilla", "Chimpanzee", "Hippopotamus", "Rhinoceros", "Camel", "Horse", "Donkey", "Cow", "Goat", "Sheep", "Pig", "Dog", "Cat", "Rabbit", "Deer", "Squirrel", "Mouse", "Bat", "Eagle", "Owl", "Falcon", "Penguin", "Ostrich", "Parrot", "Flamingo", "Crocodile", "Snake", "Turtle", "Chameleon", "Octopus", "Shark", "Dolphin", "Whale", "Blue Whale", "Jellyfish", "Platypus"]
 let allAnswers4 = ["Lion", "Tiger", "Elephant", "Giraffe", "Zebra", "Cheetah", "Leopard", "Wolf", "Fox", "Bear", "Panda", "Kangaroo", "Koala", "Monkey", "Gorilla", "Chimpanzee", "Hippopotamus", "Rhinoceros", "Camel", "Horse", "Donkey", "Cow", "Goat", "Sheep", "Pig", "Dog", "Cat", "Rabbit", "Deer", "Squirrel", "Mouse", "Bat", "Eagle", "Owl", "Falcon", "Penguin", "Ostrich", "Parrot", "Flamingo", "Crocodile", "Snake", "Turtle", "Chameleon", "Octopus", "Shark", "Dolphin", "Whale", "Blue Whale", "Jellyfish", "Platypus"]
-
+let questions = [0 , 1 ,2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 14 , 15 , 16 , 17 , 18 , 19 ];
 let randomAnswer1 = Math.floor(
     Math.random() * 50
 )
@@ -44,7 +45,6 @@ while (
 ) {
     randomAnswer4 = Math.floor(Math.random() * 50);
 }
-
 
 
 
@@ -176,113 +176,227 @@ function checkRightAnswer4(){
 
 }
 
+
 function NEXTfUNCTION (){
-    let questions = [0 , 1 ,2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 14 , 15 , 16 , 17 , 18 , 19 ];
+
 if(questions[level] == 0){
     QuestionNum.textContent = `${level + 1}.`
-    mainQuestion.textContent = `Which animal is the largest land animal?`
-    level++
+ 
+    mainQuestion.textContent = `Which animal is known as the King of the Jungle?`;
+    answer1.style.display="inline-block";
+    answer2.style.display="inline-block";
+    answer3.style.display="inline-block";
+    answer4.style.display="inline-block";
+
+    back.style.display="none"
 }else if(questions[level] == 1){
     QuestionNum.textContent = `${level + 1}.`
-
-    level++
+    mainQuestion.textContent = ``
+mainQuestion.textContent = `Which animal has a very long neck?`;
+  back.style.display="block"
+ 
 }else if(questions[level] == 2){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which animal is the largest land animal?`;
+  
+
+ 
 }else if(questions[level] == 3){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which bird cannot fly but can swim?`;
+    
 }else if(questions[level] == 4){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which animal is famous for carrying its baby in a pouch?`;
+
+ 
 }else if(questions[level] == 5){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which animal is known for its black and white stripes?`;
+
+ 
 }else if(questions[level] == 6){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which is the fastest land animal?`;
+
+ 
 }else if(questions[level] == 7){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which animal is known as man's best friend?`;
+
+ 
 }else if(questions[level] == 8){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which mammal can fly?`;
+
+ 
 }else if(questions[level] == 9){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which animal changes its color to blend into its surroundings?`;
+
+ 
 }else if(questions[level] == 10){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which is the largest animal on Earth?`;
+
+ 
 }else if(questions[level] == 11){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which animal has the longest lifespan among reptiles?`;
+
+ 
 }else if(questions[level] == 12){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which bird is the largest in the world?`;
+
+ 
 }else if(questions[level] == 13){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which animal is famous for building dams?`;
+
+ 
 }else if(questions[level] == 14){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which sea animal has eight arms?`;
+
+ 
 }else if(questions[level] == 15){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which mammal lays eggs instead of giving birth?`;
+
+ 
 }else if(questions[level] == 16){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which animal has the strongest bite force among land animals?`;
+
+ 
 }else if(questions[level] == 17){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which bird is known for imitating human speech?`;
+
+ 
 }else if(questions[level] == 18){
     QuestionNum.textContent = `${level + 1}.`
-    level++
+    mainQuestion.textContent = `Which animal is the only mammal covered in scales?`;
+
+ 
 }else if(questions[level] == 19){
     QuestionNum.textContent = `${level + 1}.`
-    level++
-}
-
-}
-
-
-
-
-/*
+    mainQuestion.textContent = `Which marine animal is considered the largest predator on Earth?`;
+    next.style.display="none"
  
-
-
-
-    if(yourAnswer.textContent == "Your Answer is : Elephant"){
-        rightAnswers++
-    }else{
-        wrongAnswer++
-    }
-
-
-
-
-
-function checkRightAnswer (){
-   if (    answer1.textContent == "Elephant"){
-     rightAnswers++
-     console.log("1 is right")
-   }else    if (    answer2.textContent == "Elephant"){
-     rightAnswers++
-     console.log("2 is right")
-
-   }else    if (    answer3.textContent == "Elephant"){
-     rightAnswers++
-     console.log("3 is right")
-
-   }else    if (    answer4.textContent == "Elephant"){
-     rightAnswers++
-     console.log("4 is right")
-
-   }else{
-    wrongAnswer++
-     console.log("wrong")
-
-   }
-   console.log(rightAnswers)
 }
-   */
+level++
+
+console.log(level)
+
+}
+
+
+function BACKfUNCTION (){
+level--
+
+if(questions[level] == 1){
+    QuestionNum.textContent = `${level}.`
+ 
+    mainQuestion.textContent = `Which animal is known as the King of the Jungle?`;
+     
+    back.style.display="none"
+}else if(questions[level] == 2){
+    QuestionNum.textContent = `${level}.`
+mainQuestion.textContent = `Which animal has a very long neck?`;
+
+ 
+}else if(questions[level] == 3){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which animal is the largest land animal?`;
+
+ 
+}else if(questions[level] == 4){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which bird cannot fly but can swim?`;
+    
+}else if(questions[level] == 5){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which animal is famous for carrying its baby in a pouch?`;
+
+ 
+}else if(questions[level] == 6){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which animal is known for its black and white stripes?`;
+
+ 
+}else if(questions[level] == 7){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which is the fastest land animal?`;
+
+ 
+}else if(questions[level] == 8){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which animal is known as man's best friend?`;
+
+ 
+}else if(questions[level] == 9){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which mammal can fly?`;
+
+ 
+}else if(questions[level] == 10){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which animal changes its color to blend into its surroundings?`;
+
+ 
+}else if(questions[level] == 11){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which is the largest animal on Earth?`;
+
+ 
+}else if(questions[level] == 12){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which animal has the longest lifespan among reptiles?`;
+
+ 
+}else if(questions[level] == 13){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which bird is the largest in the world?`;
+
+ 
+}else if(questions[level] == 14){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which animal is famous for building dams?`;
+
+ 
+}else if(questions[level] == 15){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which sea animal has eight arms?`;
+
+ 
+}else if(questions[level] == 16){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which mammal lays eggs instead of giving birth?`;
+
+ 
+}else if(questions[level] == 17){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which animal has the strongest bite force among land animals?`;
+
+ 
+}else if(questions[level] == 18){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which bird is known for imitating human speech?`;
+
+ 
+}else if(questions[level] == 19){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which animal is the only mammal covered in scales?`;
+    next.style.display="block"
+ 
+}else if(questions[level] == 20){
+    QuestionNum.textContent = `${level}.`
+    mainQuestion.textContent = `Which marine animal is considered the largest predator on Earth?`;
+    
+ 
+}
+
+console.log(level)
+}
