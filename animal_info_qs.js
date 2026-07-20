@@ -9,6 +9,7 @@ let wrongAnswer = 0;
 let selectedAnswer = "";
 let yourAnswer = document.getElementById("yourAnswer");
 let answer;
+let changeAnswers = 0 ;
 let level = 0;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
@@ -52,8 +53,6 @@ while (
 
 
 
-
-
 let rananswer1 = Math.floor(Math.random() * 4);
 
 let rananswer2 = Math.floor(Math.random() * 4);
@@ -80,77 +79,10 @@ while (
 
 
 
-if (rananswer1 == 0){ 
-    answer1.textContent = allAnswers1[randomAnswer1];
-    answer = true;
-}
-
-if (rananswer1 == 1){
-    answer2.textContent = allAnswers1[randomAnswer1];
-    answer = true;
-
-    }
-
-if (rananswer1 == 2){ 
-    answer3.textContent = allAnswers1[randomAnswer1];
-    answer = true;
-
-}
-
-if (rananswer1 == 3){
-    answer4.textContent = allAnswers1[randomAnswer1];
-    answer = true;
-    }
-    
-
-
-if (rananswer2 == 0){
-     answer1.textContent = allAnswers2[randomAnswer2];
-    }
-if (rananswer2 == 1){
-     answer2.textContent = allAnswers2[randomAnswer2];
-    }
-if (rananswer2 == 2){
-     answer3.textContent = allAnswers2[randomAnswer2];
-    
-    }
-if (rananswer2 == 3){ 
-    answer4.textContent = allAnswers2[randomAnswer2];
-}
-
-
-if (rananswer3 == 0){
-     answer1.textContent = allAnswers3[randomAnswer3];
-    }
-if (rananswer3 == 1){
-     answer2.textContent = allAnswers3[randomAnswer3];
-    }
-if (rananswer3 == 2){ 
-    answer3.textContent = allAnswers3[randomAnswer3];
-}
-if (rananswer3 == 3){ 
-    answer4.textContent = allAnswers3[randomAnswer3];
-
-}
-
-
-if (rananswer4 == 0){
-     answer1.textContent = allAnswers4[randomAnswer4];
-    }
-if (rananswer4 == 1){
-     answer2.textContent = allAnswers4[randomAnswer4];
-    }
-if (rananswer4 == 2){ 
-    answer3.textContent = allAnswers4[randomAnswer4];
-}
-if (rananswer4 == 3){
-     answer4.textContent = allAnswers4[randomAnswer4];
-    }
 
 
 
 
-/**/
 function checkRightAnswer1(){
 
    yourAnswer.textContent = `Your Answer is : ${answer1.textContent}`
@@ -177,11 +109,27 @@ function checkRightAnswer4(){
 }
 
 
+
+function showAnswers() {
+    randomAnswer1 = Math.floor(Math.random() * 50);
+    randomAnswer2 = Math.floor(Math.random() * 50);
+    randomAnswer3 = Math.floor(Math.random() * 50);
+    randomAnswer4 = Math.floor(Math.random() * 50);
+
+    answer1.textContent = allAnswers1[randomAnswer1];
+    answer2.textContent = allAnswers2[randomAnswer2];
+    answer3.textContent = allAnswers3[randomAnswer3];
+    answer4.textContent = allAnswers4[randomAnswer4];
+}
+
 function NEXTfUNCTION (){
+yourAnswer.textContent = ""
+
+showAnswers()
 
 if(questions[level] == 0){
     QuestionNum.textContent = `${level + 1}.`
- 
+
     mainQuestion.textContent = `Which animal is known as the King of the Jungle?`;
     answer1.style.display="inline-block";
     answer2.style.display="inline-block";
@@ -293,9 +241,14 @@ console.log(level)
 }
 
 
+
 function BACKfUNCTION (){
 level--
-
+yourAnswer.textContent = ""
+    randomAnswer1 = Math.floor(Math.random() * 50);
+    randomAnswer2 = Math.floor(Math.random() * 50);
+    randomAnswer3 = Math.floor(Math.random() * 50);
+    randomAnswer4 = Math.floor(Math.random() * 50);
 if(questions[level] == 1){
     QuestionNum.textContent = `${level}.`
  
@@ -400,3 +353,10 @@ mainQuestion.textContent = `Which animal has a very long neck?`;
 
 console.log(level)
 }
+
+
+    
+
+
+
+
