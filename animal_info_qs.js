@@ -1,11 +1,11 @@
 let answer1 = document.getElementById("answer1");
 let answer2 = document.getElementById("answer2");
-
 let answer3 = document.getElementById("answer3");
 let answer4 = document.getElementById("answer4");
 let next = document.getElementById("next");
 let back = document.getElementById("back");
 let rightAnswers = 0;
+let userAnswers = [];
 let wrongAnswer = 0;
 let selectedAnswer = "";
 let yourAnswer = document.getElementById("yourAnswer");
@@ -14,7 +14,7 @@ let level = 0;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
 let theRightAnswer = "";
-let progres = document.getElementById("progres");
+let answerList = ["Lion", "Giraffe", "Elephant", "Penguin", "Kangaroo", "Zebra", "Cheetah", "Dog", "Bat", "Chameleon", "Blue Whale", "Turtle", "Ostrich", "Beaver", "Octopus", "Platypus", "Crocodile", "Parrot", "Pangolin", "Sperm Whale"];let progres = document.getElementById("progres");
 
 let allAnswers = ["Lion", "Tiger", "Elephant", "Giraffe", "Zebra", "Cheetah", "Leopard", "Wolf", "Fox", "Bear", "Panda", "Kangaroo", "Koala", "Monkey", "Pangolin", "Chimpanzee", "Hippopotamus", "Rhinoceros", "Camel", "Sperm Whale", "Donkey", "Cow", "Goat", "Sheep", "Pig", "Dog", "Beaver", "Rabbit", "Deer", "Squirrel", "Mouse", "Bat", "Eagle", "Owl", "Falcon", "Penguin", "Ostrich", "Parrot", "Flamingo", "Crocodile", "Snake", "Turtle", "Chameleon", "Octopus", "Shark", "Dolphin", "Whale", "Blue Whale", "Jellyfish", "Platypus"]
 let questions = [0 , 1 ,2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 , 11 , 12 , 13 , 14 , 15 , 16 , 17 , 18 , 19 ];
@@ -82,28 +82,24 @@ while (
 
 
 function checkRightAnswer1(){
+    userAnswers[level - 1] = answer1.textContent;
+    yourAnswer.textContent = `Your Answer is : ${answer1.textContent}`;
 
-   yourAnswer.textContent = `Your Answer is : ${answer1.textContent}`
 }
-
 
 function checkRightAnswer2(){
-
-      yourAnswer.textContent = `Your Answer is : ${answer2.textContent}`
-
+    userAnswers[level - 1] = answer2.textContent;
+    yourAnswer.textContent = `Your Answer is : ${answer2.textContent}`;
 }
 
-
 function checkRightAnswer3(){
-
-      yourAnswer.textContent = `Your Answer is : ${answer3.textContent}`
-
+    userAnswers[level - 1] = answer3.textContent;
+    yourAnswer.textContent = `Your Answer is : ${answer3.textContent}`;
 }
 
 function checkRightAnswer4(){
-
-      yourAnswer.textContent = `Your Answer is : ${answer4.textContent}`
-
+    userAnswers[level - 1] = answer4.textContent;
+    yourAnswer.textContent = `Your Answer is : ${answer4.textContent}`;
 }
 
 
@@ -111,6 +107,19 @@ function checkRightAnswer4(){
 
 
 function NEXTfUNCTION (){
+rightAnswers = 0;
+wrongAnswer = 0;
+console.log(userAnswers);
+for (let i = 0; i < answerList.length; i++) {
+    if (userAnswers[i] === answerList[i]) {
+        rightAnswers++;
+        console.log("right")
+    } else if (userAnswers[i] !== undefined) {
+        wrongAnswer++;
+        console.log("wrong")
+
+    }
+}
 yourAnswer.textContent = ""
     randomAnswer1 = Math.floor(Math.random() * 50);
     randomAnswer2 = Math.floor(Math.random() * 50);
@@ -141,6 +150,7 @@ answer4.textContent = allAnswers[randomAnswer4]
 
 
 
+
 }else if(questions[level] == 1){
     
         randomAnswer4 = allAnswers.indexOf("Giraffe");
@@ -157,7 +167,7 @@ answer2.textContent = allAnswers[randomAnswer2]
 answer3.textContent = allAnswers[randomAnswer3]
 answer4.textContent = allAnswers[randomAnswer4]
  progres.textContent = `Level : ${level + 1}/20`
- 
+
 }else if(questions[level] == 2){
             randomAnswer2 = allAnswers.indexOf("Elephant");
              randomAnswer4 = allAnswers.indexOf("Crocodile");

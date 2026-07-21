@@ -54,7 +54,7 @@ font-size: 40px;
     background-color: #fff;
     border: 2px solid;
     border-radius: 15px;
-    box-shadow: 4px 4px;
+    box-shadow: 7px 7px;
     transition: 0.3s;
     display: none;
 }
@@ -65,10 +65,11 @@ font-size: 40px;
 .answerbutton:active{
         transform: scale(1);
 
-      transform: translate(4px, 4px);
+      transform: translate(7px, 7px);
       box-shadow: none;
     
 }
+
 #next{
 font-size: 40px;
 background-color: #000;
