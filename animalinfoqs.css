@@ -69,7 +69,10 @@ font-size: 40px;
       box-shadow: none;
     
 }
-
+.nextback{
+    display: flex;
+    justify-content: space-around;
+}
 #next{
 font-size: 40px;
 background-color: #000;
@@ -78,13 +81,31 @@ padding: 10px;
 border:none ;
 border-radius: 20px;
 transition: 0.3s;
-float: right;
 margin: 30px;
+cursor: pointer;
 }
 #next:hover{
     transform: scale(1.1);
 }
 #next:active{
+    transform: scale(1);
+}
+#finsh{
+    display: none;
+font-size: 38px;
+background-color: #ffffff;
+color: #000000;
+padding: 10px;
+border:#000 solid 2px ;
+border-radius: 20px;
+transition: 0.3s;
+margin: 30px;
+cursor: pointer;
+}
+#finsh:hover{
+    transform: scale(1.1);
+}
+#finsh:active{
     transform: scale(1);
 }
 #yourAnswer{
@@ -99,9 +120,9 @@ padding: 10px;
 border:none ;
 border-radius: 20px;
 transition: 0.3s;
-float: left;
 margin: 30px;
 display:none;
+cursor: pointer;
 }
 #back:hover{
     transform: scale(1.1);

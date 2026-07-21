@@ -4,6 +4,7 @@ let answer3 = document.getElementById("answer3");
 let answer4 = document.getElementById("answer4");
 let next = document.getElementById("next");
 let back = document.getElementById("back");
+let finsh = document.getElementById("finsh");
 let randomPlace = Math.floor(Math.random() * 4);
 let questions = [
     "Which animal is known as the King of the Jungle?",
@@ -55,29 +56,6 @@ let randomAnswer4 = Math.floor(
     Math.random() * 50
 )
 
-function finsh(){
-
-
-while (randomAnswer2 === randomAnswer1) {
-    randomAnswer2 = Math.floor(Math.random() * 50);
-}
-while (randomAnswer3 === randomAnswer1 || randomAnswer3 === randomAnswer2) {
-    randomAnswer3 = Math.floor(Math.random() * 50);
-}
-while (
-    randomAnswer4 === randomAnswer1 ||
-    randomAnswer4 === randomAnswer2 ||
-    randomAnswer4 === randomAnswer3
-) {
-    randomAnswer4 = Math.floor(Math.random() * 50);
-}
-}
-finsh()
-
-
-
-
-
 let rananswer1 = Math.floor(Math.random() * 4);
 
 let rananswer2 = Math.floor(Math.random() * 4);
@@ -107,25 +85,33 @@ while (
 
 function checkRightAnswer1(){
     yourAnswer.textContent = `Your Answer is : ${answer1.textContent}`;
+userAnswers[level] = answer1.textContent
 
 }
 
 function checkRightAnswer2(){
     yourAnswer.textContent = `Your Answer is : ${answer2.textContent}`;
+userAnswers[level] = answer2.textContent
+
 }
 
 function checkRightAnswer3(){
     yourAnswer.textContent = `Your Answer is : ${answer3.textContent}`;
+userAnswers[level] = answer3.textContent
+
 }
 
 function checkRightAnswer4(){
     yourAnswer.textContent = `Your Answer is : ${answer4.textContent}`;
+userAnswers[level] = answer4.textContent
+
 }
 
 
 
 
 function NEXTfUNCTION (){
+    yourAnswer.textContent = ""
 mainQuestion.textContent = questions[level+1]
 QuestionNum.textContent = `${level+2}.`
 answer1.style.display="inline-block"
@@ -151,12 +137,59 @@ if (randomPlace === 0) {
  answer2.textContent = allQuestionAnswers[level + 1][rananswer2];
  answer3.textContent = allQuestionAnswers[level + 1][rananswer3];
  answer4.textContent = allQuestionAnswers[level + 1][rananswer4];
-if (next.onclick){
-    randomAnswer1 = Math.floor(Math.random() * 50);
-    randomAnswer2 = Math.floor(Math.random() * 50);
-    randomAnswer3 = Math.floor(Math.random() * 50);
-    randomAnswer4 = Math.floor(Math.random() * 50);
+
+if(level == 0){
+    back.style.display="block"
 }
+if(level == -1){
+    back.style.display="none"
+}
+if(level == 18){
+    next.style.display="none"
+    finsh.style.display="block"
+}
+
+console.log(level)
+console.log(userAnswers)
 level++
 
+}
+
+
+
+
+
+
+
+
+
+function BACKfUNCTION (){
+        yourAnswer.textContent = ""
+    level--
+mainQuestion.textContent = questions[level]
+QuestionNum.textContent = `${level+1}.`
+
+if (randomPlace === 0) {
+    randomAnswer1 = answer.indexOf(answer);
+}else if (randomPlace === 1) {
+    randomAnswer2 = answer.indexOf(answer);
+}else if (randomPlace === 2){
+    randomAnswer3 = answer.indexOf(answer);
+}else {
+    randomAnswer4 = answer.indexOf(answer);
+}
+
+
+ answer1.textContent = allQuestionAnswers[level][rananswer1] ;
+ answer2.textContent = allQuestionAnswers[level][rananswer2];
+ answer3.textContent = allQuestionAnswers[level][rananswer3];
+ answer4.textContent = allQuestionAnswers[level][rananswer4];
+
+
+
+if(level == 18){
+    next.style.display="block"
+        finsh.style.display="none"
+
+}
 }
