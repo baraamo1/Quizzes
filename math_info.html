@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal information Quistions</title>
+    <link rel="stylesheet" href="animalinfoqs.css">
+    <link rel="icon" href="img/pawprint.png">
+
+
+
+</head>
+<body>
+    <nav class="infobar">
+        <button id="backbutton" onclick="location.href=`animalkind.html`">Back</button>
+        <p id="progres">Level : -/20</p>
+
+    </nav>
+    <div class="mainbody">
+    <p id="qnum">0.</p><p id="mainqs">Please Click "Next" Button To Start
+
+    </p>
+</div>
+
+<div id="results" >
+    <p id="resname">The Results</p>
+            <div class="info">
+            <p class="ysno" id="correct">correct answers : 0</p>
+            <p class="ysno" id="wrong">wrong answers : 0</p>
+
+        </div>
+<button id="ok" onclick="location.href=`animalkind.html`">Ok</button>
+</div>
+
+<div class="answers">
+    <div>
+<button class="answerbutton" id="answer1" onclick="checkRightAnswer1()"></button>
+<button class="answerbutton" id="answer2" onclick="checkRightAnswer2()"></button>
+</div>
+<div>
+<button class="answerbutton" id="answer3" onclick="checkRightAnswer3()"></button>
+<button class="answerbutton" id="answer4" onclick="checkRightAnswer4()"></button>
+
+</div>
+<p id="yourAnswer"></p>
+</div>
+<div class="nextback">
+    <button id="back" onclick="BACKfUNCTION()">back</button>
+
+<button id="finsh" onclick="FINSHfUNCTION()">Finsh</button>
+<button id="next" onclick="NEXTfUNCTION()">Next</button>
+
+
+</div>
+
+
+</div>
+<script src="animal_info_qs.js"></script>
+</body>
+</html>

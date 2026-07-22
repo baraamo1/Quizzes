@@ -11,26 +11,26 @@ let correct = document.getElementById("correct");
 let wrong = document.getElementById("wrong");
 
 let questions = [
-    "Which animal is known as the King of the Jungle?",
-    "Which animal has a very long neck?",
-    "Which animal is the largest land animal?",
-    "Which bird cannot fly but can swim?",
-    "Which animal is famous for carrying its baby in a pouch?",
-    "Which animal is known for its black and white stripes?",
-    "Which is the fastest land animal?",
-    "Which animal is known as man's best friend?",
-    "Which mammal can fly?",
-    "Which animal changes its color to blend into its surroundings?",
-    "Which is the largest animal on Earth?",
-    "Which animal has the longest lifespan among reptiles?",
-    "Which bird is the largest in the world?",
-    "Which animal is famous for building dams?",
-    "Which sea animal has eight arms?",
-    "Which mammal lays eggs instead of giving birth?",
-    "Which animal has the strongest bite force among land animals?",
-    "Which bird is known for imitating human speech?",
-    "Which animal is the only mammal covered in scales?",
-    "Which marine animal is considered the largest predator on Earth?"
+    "Which country's flag is known as the Union Jack?",
+    "Which country's flag has a red circle on a white background?",
+    "Which country's flag features 50 stars and 13 stripes?",
+    "Which country's flag has a red maple leaf in the center?",
+    "Which country's flag is green with a white crescent and star?",
+    "Which country's flag has a red circle in the middle of a green background?",
+    "Which country's flag has three vertical stripes: blue, white, and red?",
+    "Which country's flag has a blue cross on a white background?",
+    "Which country's flag has a yellow cross on a blue background?",
+    "Which country's flag has a red background with five yellow stars?",
+    "Which country's flag is green, white, and orange with vertical stripes?",
+    "Which country's flag has black, red, and yellow horizontal stripes?",
+    "Which country's flag has a red and white design with two red bars and a maple leaf?",
+    "Which country's flag has green, white, and red vertical stripes?",
+    "Which country's flag features the Union Jack and stars representing the Southern Cross?",
+    "Which country's flag has a blue Star of David between two blue stripes?",
+    "Which country's flag is red with a white crescent and star?",
+    "Which country's flag has a white cross on a red background?",
+    "Which country's flag has a red dragon on a green and white background?",
+    "Which country's flag has a blue, yellow, and red vertical tricolor?"
 ];
 let rightAnswers = 0;
 let userAnswers = [];
@@ -43,9 +43,9 @@ let answer;
 let level = -1;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
-let answerList = ["Lion", "Giraffe", "Elephant", "Penguin", "Kangaroo", "Zebra", "Cheetah", "Dog", "Bat", "Chameleon", "Blue Whale", "Turtle", "Ostrich", "Beaver", "Octopus", "Platypus", "Crocodile", "Parrot", "Pangolin", "Sperm Whale"];
+let answerList = ["United Kingdom", "Japan", "United States", "Canada", "Pakistan", "Bangladesh", "France", "Finland", "Sweden", "China", "Ireland", "Germany", "Canada", "Italy", "Australia", "Israel", "Turkey", "Switzerland", "Wales", "Romania"];
 let progres = document.getElementById("progres");
-let allQuestionAnswers = [["Lion", "Tiger", "Owl", "Goat"], ["Kangaroo", "Camel", "Flamingo", "Giraffe"], ["Octopus", "Elephant", "Giraffe", "Crocodile"], ["Penguin", "Owl", "Falcon", "Flamingo"], ["Octopus", "Crocodile", "Kangaroo", "Eagle"], ["Tiger", "Snake", "Zebra", "Penguin"], ["Tiger", "Sheep", "Dog", "Cheetah"], ["Flamingo", "Dog", "Goat", "Monkey"], ["Bat", "Owl", "Parrot", "Eagle"], ["Platypus", "Chameleon", "Rhinoceros", "Turtle"], ["Jellyfish", "Whale", "Elephant", "Blue Whale"], ["Camel", "Turtle", "Crocodile", "Panda"], ["Hippopotamus", "Leopard", "Ostrich", "Platypus"], ["Flamingo", "Bear", "Beaver", "Donkey"], ["Octopus", "Parrot", "Falcon", "Jellyfish"], ["Bat", "Chameleon", "Rabbit", "Platypus"], ["Tiger", "Lion", "Crocodile", "Cheetah"], ["Parrot", "Flamingo", "Bat", "Eagle"], ["Pangolin", "Crocodile", "Chimpanzee", "Snake"], ["Octopus", "Sperm Whale", "Turtle", "Shark"]];
+let allQuestionAnswers = [["United Kingdom", "Australia", "New Zealand", "Iceland"], ["Japan", "Bangladesh", "South Korea", "Palau"], ["United States", "Liberia", "Malaysia", "Cuba"], ["Canada", "Austria", "Peru", "Latvia"], ["Pakistan", "Algeria", "Turkey", "Tunisia"], ["Bangladesh", "Japan", "Palau", "Greenland"], ["France", "Netherlands", "Luxembourg", "Russia"], ["Finland", "Sweden", "Norway", "Denmark"], ["Sweden", "Finland", "Norway", "Iceland"], ["China", "Vietnam", "North Korea", "Singapore"], ["Ireland", "Ivory Coast", "Italy", "Mexico"], ["Germany", "Belgium", "Armenia", "Lithuania"], ["Canada", "Austria", "Peru", "Poland"], ["Italy", "Mexico", "Ireland", "Hungary"], ["Australia", "New Zealand", "Fiji", "Tuvalu"], ["Israel", "Greece", "Argentina", "Honduras"], ["Turkey", "Tunisia", "Algeria", "Pakistan"], ["Switzerland", "Denmark", "England", "Georgia"], ["Wales", "Bhutan", "Scotland", "China"], ["Romania", "Chad", "Moldova", "Andorra"]];
 let randomAnswer1 = Math.floor(
     Math.random() * 50
 )
