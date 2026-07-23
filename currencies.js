@@ -11,26 +11,26 @@ let correct = document.getElementById("correct");
 let wrong = document.getElementById("wrong");
 
 let questions = [
-    "Which country's flag is known as the Union Jack?",
-    "Which country's flag has a red circle on a white background?",
-    "Which country's flag features 50 stars and 13 stripes?",
-    "Which country's flag has a red maple leaf in the center?",
-    "Which country's flag is green with a white crescent and star?",
-    "Which country's flag has a red circle in the middle of a green background?",
-    "Which country's flag has three vertical stripes: blue, white, and red?",
-    "Which country's flag has a blue cross on a white background?",
-    "Which country's flag has a yellow cross on a blue background?",
-    "Which country's flag has a red background with five yellow stars?",
-    "Which country's flag is green, white, and orange with vertical stripes?",
-    "Which country's flag has black, red, and yellow horizontal stripes?",
-    "Which country's flag has a red and white design with two red bars and a maple leaf?",
-    "Which country's flag has green, white, and red vertical stripes?",
-    "Which country's flag features the Union Jack and stars representing the Southern Cross?",
-    "Which country's flag has a blue Star of David between two blue stripes?",
-    "Which country's flag is red with a white crescent and star?",
-    "Which country's flag has a white cross on a red background?",
-    "Which country's flag has a red dragon on a green and white background?",
-    "Which country's flag has a blue, yellow, and red vertical tricolor?"
+    "What is the currency of Brazil?",
+    "Which country uses the Baht?",
+    "Which currency has the symbol ¥?",
+    "How many countries use the Euro?",
+    "Which currency is used by the largest number of countries?",
+    "Which country has the highest-valued currency in the world?",
+    "Which country uses the Forint?",
+    "What is the currency of Switzerland?",
+    "Which currency has the symbol ₹?",
+    "How many countries officially use the US Dollar?",
+    "Which country uses the Dong?",
+    "What is the currency of Turkey?",
+    "Which currency has the symbol ₽?",
+    "Which country uses the Zloty?",
+    "What is the currency of Norway?",
+    "Which currency has the symbol ₺?",
+    "Which currency is used in the European Union?",
+    "Which country uses the Tenge?",
+    "What is the currency of South Africa?",
+    "Which country uses the Rand?"
 ];
 let rightAnswers = 0;
 let userAnswers = [];
@@ -43,21 +43,12 @@ let answer;
 let level = -1;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
-let answerList = ["United Kingdom", "Japan", "United States", "Canada", "Pakistan", "Bangladesh", "France", "Finland", "Sweden", "China", "Ireland", "Germany", "Canada", "Italy", "Australia", "Israel", "Turkey", "Switzerland", "Wales", "Romania"];
+let answerList = ["Real", "Thailand", "Yen", "20", "Dollar", "Kuwait", "Hungary", "Swiss Franc", "Indian Rupee", "1", "Vietnam", "Lira", "Ruble", "Poland", "Krone", "Turkish Lira", "Euro", "Kazakhstan", "Rand", "South Africa"];
+
 let progres = document.getElementById("progres");
-let allQuestionAnswers = [["United Kingdom", "Australia", "New Zealand", "Iceland"], ["Japan", "Bangladesh", "South Korea", "Palau"], ["United States", "Liberia", "Malaysia", "Cuba"], ["Canada", "Austria", "Peru", "Latvia"], ["Pakistan", "Algeria", "Turkey", "Tunisia"], ["Bangladesh", "Japan", "Palau", "Greenland"], ["France", "Netherlands", "Luxembourg", "Russia"], ["Finland", "Sweden", "Norway", "Denmark"], ["Sweden", "Finland", "Norway", "Iceland"], ["China", "Vietnam", "North Korea", "Singapore"], ["Ireland", "Ivory Coast", "Italy", "Mexico"], ["Germany", "Belgium", "Armenia", "Lithuania"], ["Canada", "Austria", "Peru", "Poland"], ["Italy", "Mexico", "Ireland", "Hungary"], ["Australia", "New Zealand", "Fiji", "Tuvalu"], ["Israel", "Greece", "Argentina", "Honduras"], ["Turkey", "Tunisia", "Algeria", "Pakistan"], ["Switzerland", "Denmark", "England", "Georgia"], ["Wales", "Bhutan", "Scotland", "China"], ["Romania", "Chad", "Moldova", "Andorra"]];
-let randomAnswer1 = Math.floor(
-    Math.random() * 50
-)
-let randomAnswer2 = Math.floor(
-    Math.random() * 50
-)
-let randomAnswer3 = Math.floor(
-    Math.random() * 50
-)
-let randomAnswer4 = Math.floor(
-    Math.random() * 50
-)
+let allQuestionAnswers = [["Real", "Peso", "Ruble", "Rand"], ["Thailand", "Vietnam", "Cambodia", "Laos"], ["Yen", "Yuan", "Won", "Baht"], ["20", "18", "22", "25"], ["Dollar", "Euro", "Pound Sterling", "Yen"], ["Kuwait", "Bahrain", "United Kingdom", "Switzerland"], ["Hungary", "Poland", "Romania", "Czech Republic"], ["Swiss Franc", "Euro", "Krone", "Pound Sterling"], ["Indian Rupee", "Pakistani Rupee", "Nepalese Rupee", "Sri Lankan Rupee"], ["1", "2", "5", "10"], ["Vietnam", "Thailand", "China", "South Korea"], ["Lira", "Ruble", "Riyal", "Dirham"], ["Ruble", "Hryvnia", "Tenge", "Som"], ["Poland", "Hungary", "Czech Republic", "Slovakia"], ["Krone", "Krona", "Euro", "Franc"], ["Turkish Lira", "Euro", "Egyptian Pound", "Dirham"], ["Euro", "US Dollar", "Swiss Franc", "Pound Sterling"], ["Kazakhstan", "Uzbekistan", "Mongolia", "Kyrgyzstan"], ["Rand", "Real", "Ruble", "Riyal"], ["South Africa", "Namibia", "Botswana", "Zimbabwe"]];
+
+
 
 let rananswer1 = Math.floor(Math.random() * 4);
 

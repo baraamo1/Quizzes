@@ -87,27 +87,27 @@ while (
 
 
 function checkRightAnswer1(){
-    yourAnswer.textContent = `Your Selected is : ${answer1.textContent}`;
+    yourAnswer.textContent = `You selected : ${answer1.textContent}`;
 userAnswers[level] = answer1.textContent
 text[level] = yourAnswer.textContent
 }
 
 function checkRightAnswer2(){
-    yourAnswer.textContent = `Your Selected is : ${answer2.textContent}`;
+    yourAnswer.textContent = `You selected : ${answer2.textContent}`;
 userAnswers[level] = answer2.textContent
 text[level] = yourAnswer.textContent
 
 }
 
 function checkRightAnswer3(){
-    yourAnswer.textContent = `Your Selected is : ${answer3.textContent}`;
+    yourAnswer.textContent = `You selected : ${answer3.textContent}`;
 userAnswers[level] = answer3.textContent
 text[level] = yourAnswer.textContent
 
 }
 
 function checkRightAnswer4(){
-    yourAnswer.textContent = `Your Selected is : ${answer4.textContent}`;
+    yourAnswer.textContent = `You selected : ${answer4.textContent}`;
 userAnswers[level] = answer4.textContent
 text[level] = yourAnswer.textContent
 }
