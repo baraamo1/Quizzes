@@ -11,24 +11,26 @@ let correct = document.getElementById("correct");
 let wrong = document.getElementById("wrong");
 
 let questions = [
-    "Which country speaks Portuguese as its official language?",
-    "Which language is mainly spoken in Brazil?",
-    "Which language uses Hiragana and Katakana?",
-    "Which language is written with Hangul?",
-    "Which language is mainly spoken in Austria?",
-    "How many countries speak French as an official language?",    "Which language uses the Cyrillic alphabet?",
-    "Which language is mainly spoken in Argentina?",
-    "Which country speaks Swedish as its official language?",
-    "Which language is mainly spoken in Iran?",
-    "How many countries have English as an official language?",    "Which language is mainly spoken in Egypt?",
-    "Approximately how many languages are spoken in the world?",
-    "Which language is considered the most famous dead language?",
-    "Which is the most widely spoken language in the world?",  
-    "Which country has the highest number of languages?",
-"Which language is written from right to left?",
-"How many official languages does South Africa have?",
-"Which language uses the Devanagari script?",
-"Which language has the most native speakers in the world?"
+    "Which is the largest country in the world by land area?",
+    "Which country is home to the Amazon Rainforest?",
+    "What country is located between France and Spain?",
+    "Which country is shaped like a boot?",
+    "Which country has the Great Pyramid of Giza?",
+    "Which country is known as the Land of the Rising Sun?",
+    "Which country is both in Europe and Asia?",
+    "Which country has the longest coastline in the world?",
+    "Which country is separated from Australia by the Tasman Sea?",
+    "Which country is the largest in Africa?",
+    "Which country shares a border with both Germany and France?",
+    "Which country is home to Mount Everest?",
+    "Which country has the city of Rio de Janeiro?",
+    "Which country is famous for the Taj Mahal?",
+    "Which country has the city of Istanbul?",
+    "Which country is located directly south of the United States?",
+    "Which country has the largest desert in the world (Sahara)?",
+    "Which country is known for the Great Wall?",
+    "Which country is an island in the Indian Ocean southeast of India?",
+    "Which country borders Germany to the east?"
 ];
 let rightAnswers = 0;
 let userAnswers = [];
@@ -41,9 +43,9 @@ let answer;
 let level = -1;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
-let answerList = ["Portuguese", "Portuguese", "Japanese", "Korean", "German", "29", "Russian", "Spanish", "Swedish", "Persian", "67", "Arabic", "About 7,000", "Latin", "English", "Hungarian", "Hebrew", "11","Hindi","Mandarin Chinese"];
+let answerList = ["Russia", "Brazil", "Andorra", "Italy", "Egypt", "Japan", "Turkey", "Canada", "New Zealand", "Algeria", "Luxembourg", "Nepal", "Brazil", "India", "Turkey", "Mexico", "Algeria", "China", "Sri Lanka", "Poland"];
 let progres = document.getElementById("progres");
-let allQuestionAnswers = [["Spanish", "Portuguese", "French", "Italian"], ["Portuguese", "Spanish", "French", "Italian"], ["Chinese", "Japanese", "Korean", "Thai"], ["Japanese", "Chinese", "Korean", "Vietnamese"], ["German", "Dutch", "Swedish", "Danish"], ["1", "25","29", "17"], ["Russian", "Ukrainian", "Bulgarian", "Serbian"], ["Portuguese", "Spanish", "Italian", "French"], ["Swedish", "Norwegian", "Danish", "Finnish"], ["Persian", "Arabic", "Turkish", "Urdu"], ["24", "34", "67", "55"], ["Arabic", "Hebrew", "Persian", "Turkish"], ["About 7,000", "About 3,000", "About 5,000", "About 10,000"], ["Latin", "Ancient Egyptian", "Sanskrit", "Old Norse"], ["English", "Mandarin Chinese", "Spanish", "Hindi"], ["India", "Indonesia", "Nigeria", "Papua New Guinea"], ["Arabic", "English", "French", "Russian"] ,["11", "3", "5", "8"],["Hindi", "Nepali", "Bengali", "Marathi"],["Mandarin Chinese", "English", "Spanish", "Hindi"]];
+let allQuestionAnswers = [["Russia", "Canada", "China", "United States"], ["Brazil", "Peru", "Colombia", "Venezuela"], ["Andorra", "Monaco", "San Marino", "Liechtenstein"], ["Italy", "Greece", "Portugal", "Croatia"], ["Egypt", "Sudan", "Libya", "Jordan"], ["Japan", "China", "South Korea", "Thailand"], ["Turkey", "Russia", "Kazakhstan", "Georgia"], ["Canada", "Russia", "Indonesia", "Australia"], ["New Zealand", "Fiji", "Papua New Guinea", "Indonesia"], ["Algeria", "Libya", "Sudan", "Chad"], ["Belgium", "Luxembourg", "Netherlands", "Switzerland"], ["Nepal", "Bhutan", "India", "China"], ["Brazil", "Argentina", "Chile", "Peru"], ["India", "Pakistan", "Bangladesh", "Nepal"], ["Turkey", "Greece", "Romania", "Bulgaria"], ["Mexico", "Guatemala", "Belize", "Cuba"], ["Algeria", "Egypt", "Morocco", "Libya"], ["China", "Japan", "South Korea", "Mongolia"], ["Sri Lanka", "Maldives", "Madagascar", "Indonesia"], ["Poland", "Czech Republic", "Austria", "Denmark"]];
 
 let rananswer1 = Math.floor(Math.random() * 4);
 
@@ -129,15 +131,14 @@ answer3.style.display="inline-block"
 answer4.style.display="inline-block"
  answer = answerList[level+1];
 
-if(level == 0){
-    back.style.display="block"
-}
-if(level == -1 || 0){
-    back.style.display="none"
-}
-if(level == 18){
-    next.style.display="none"
-    finsh.style.display="block"
+if (randomPlace === 0) {
+    randomAnswer1 = answer.indexOf(answer);
+}else if (randomPlace === 1) {
+    randomAnswer2 = answer.indexOf(answer);
+}else if (randomPlace === 2){
+    randomAnswer3 = answer.indexOf(answer);
+}else {
+    randomAnswer4 = answer.indexOf(answer);
 }
 
  answer1.textContent = allQuestionAnswers[level + 1][rananswer1] ;
@@ -148,7 +149,7 @@ if(level == 18){
 if(level == 0){
     back.style.display="block"
 }
-if(level == -1){
+if(level == -1 || 0){
     back.style.display="none"
 }
 if(level == 18){

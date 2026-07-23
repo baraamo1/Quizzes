@@ -11,24 +11,26 @@ let correct = document.getElementById("correct");
 let wrong = document.getElementById("wrong");
 
 let questions = [
-    "Which country speaks Portuguese as its official language?",
-    "Which language is mainly spoken in Brazil?",
-    "Which language uses Hiragana and Katakana?",
-    "Which language is written with Hangul?",
-    "Which language is mainly spoken in Austria?",
-    "How many countries speak French as an official language?",    "Which language uses the Cyrillic alphabet?",
-    "Which language is mainly spoken in Argentina?",
-    "Which country speaks Swedish as its official language?",
-    "Which language is mainly spoken in Iran?",
-    "How many countries have English as an official language?",    "Which language is mainly spoken in Egypt?",
-    "Approximately how many languages are spoken in the world?",
-    "Which language is considered the most famous dead language?",
-    "Which is the most widely spoken language in the world?",  
-    "Which country has the highest number of languages?",
-"Which language is written from right to left?",
-"How many official languages does South Africa have?",
-"Which language uses the Devanagari script?",
-"Which language has the most native speakers in the world?"
+    "Which sport is known as the 'King of Sports'?",
+    "How many players are on a soccer team on the field?",
+    "Which sport uses a racket and a shuttlecock?",
+    "Which country hosted the 2022 FIFA World Cup?",
+    "How many points is a touchdown worth in American football?",
+    "Which sport is played at Wimbledon?",
+    "Which sport uses a bat, ball, and wickets?",
+    "Which country invented basketball?",
+    "How many Olympic rings are there?",
+    "Which sport is Michael Jordan famous for?",
+    "Which country won the FIFA World Cup in 2022?",
+    "Which sport includes the events vault, balance beam, and uneven bars?",
+    "What is the highest possible break in snooker?",
+    "Which sport is played in the Tour de France?",
+    "Which country is famous for sumo wrestling?",
+    "How often are the Summer Olympic Games held?",
+    "Which sport uses clubs and a small white ball?",
+    "Which country has won the most FIFA World Cups?",
+    "Which sport features the Stanley Cup?",
+    "Which sport uses a pommel horse?"
 ];
 let rightAnswers = 0;
 let userAnswers = [];
@@ -41,9 +43,10 @@ let answer;
 let level = -1;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
-let answerList = ["Portuguese", "Portuguese", "Japanese", "Korean", "German", "29", "Russian", "Spanish", "Swedish", "Persian", "67", "Arabic", "About 7,000", "Latin", "English", "Hungarian", "Hebrew", "11","Hindi","Mandarin Chinese"];
+let answerList = ["Soccer", "11", "Badminton", "Qatar", "6", "Tennis", "Cricket", "Canada", "5", "Basketball", "Argentina", "Gymnastics", "147", "Cycling", "Japan", "4 years", "Golf", "Brazil", "Ice Hockey", "Gymnastics"];
 let progres = document.getElementById("progres");
-let allQuestionAnswers = [["Spanish", "Portuguese", "French", "Italian"], ["Portuguese", "Spanish", "French", "Italian"], ["Chinese", "Japanese", "Korean", "Thai"], ["Japanese", "Chinese", "Korean", "Vietnamese"], ["German", "Dutch", "Swedish", "Danish"], ["1", "25","29", "17"], ["Russian", "Ukrainian", "Bulgarian", "Serbian"], ["Portuguese", "Spanish", "Italian", "French"], ["Swedish", "Norwegian", "Danish", "Finnish"], ["Persian", "Arabic", "Turkish", "Urdu"], ["24", "34", "67", "55"], ["Arabic", "Hebrew", "Persian", "Turkish"], ["About 7,000", "About 3,000", "About 5,000", "About 10,000"], ["Latin", "Ancient Egyptian", "Sanskrit", "Old Norse"], ["English", "Mandarin Chinese", "Spanish", "Hindi"], ["India", "Indonesia", "Nigeria", "Papua New Guinea"], ["Arabic", "English", "French", "Russian"] ,["11", "3", "5", "8"],["Hindi", "Nepali", "Bengali", "Marathi"],["Mandarin Chinese", "English", "Spanish", "Hindi"]];
+let allQuestionAnswers = [["Soccer", "Basketball", "Tennis", "Cricket"], ["11", "9", "10", "12"], ["Badminton", "Tennis", "Table Tennis", "Squash"], ["Qatar", "Russia", "Brazil", "France"], ["6", "3", "7", "9"], ["Tennis", "Golf", "Cricket", "Rugby"], ["Cricket", "Baseball", "Softball", "Rugby"], ["Canada", "United States", "England", "Australia"], ["5", "4", "6", "7"], ["Basketball", "Baseball", "Tennis", "Golf"], ["Argentina", "France", "Brazil", "Germany"], ["Gymnastics", "Figure Skating", "Diving", "Fencing"], ["147", "155", "140", "150"], ["Cycling", "Running", "Swimming", "Rowing"], ["Japan", "China", "South Korea", "Mongolia"], ["4 years", "2 years", "3 years", "5 years"], ["Golf", "Baseball", "Hockey", "Polo"], ["Brazil", "Germany", "Italy", "Argentina"], ["Ice Hockey", "Basketball", "Baseball", "Rugby"], ["Gymnastics", "Wrestling", "Weightlifting", "Fencing"]];
+
 
 let rananswer1 = Math.floor(Math.random() * 4);
 
@@ -67,6 +70,7 @@ while (
 }
 
 
+
 function random(){
 while (rananswer2 === rananswer1) {
     rananswer2 = Math.floor(Math.random() * 4);
@@ -84,7 +88,6 @@ while (
     rananswer4 = Math.floor(Math.random() * 4);
 }  
 }
-
 
 
 
@@ -129,15 +132,14 @@ answer3.style.display="inline-block"
 answer4.style.display="inline-block"
  answer = answerList[level+1];
 
-if(level == 0){
-    back.style.display="block"
-}
-if(level == -1 || 0){
-    back.style.display="none"
-}
-if(level == 18){
-    next.style.display="none"
-    finsh.style.display="block"
+if (randomPlace === 0) {
+    randomAnswer1 = answer.indexOf(answer);
+}else if (randomPlace === 1) {
+    randomAnswer2 = answer.indexOf(answer);
+}else if (randomPlace === 2){
+    randomAnswer3 = answer.indexOf(answer);
+}else {
+    randomAnswer4 = answer.indexOf(answer);
 }
 
  answer1.textContent = allQuestionAnswers[level + 1][rananswer1] ;
@@ -148,7 +150,7 @@ if(level == 18){
 if(level == 0){
     back.style.display="block"
 }
-if(level == -1){
+if(level == -1 || 0){
     back.style.display="none"
 }
 if(level == 18){
