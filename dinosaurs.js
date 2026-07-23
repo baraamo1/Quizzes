@@ -11,26 +11,26 @@ let correct = document.getElementById("correct");
 let wrong = document.getElementById("wrong");
 
 let questions = [
-    "Which brand makes the iPhone?",
-    "Which brand created Windows?",
-    "Which brand owns Instagram?",
-    "Which brand makes PlayStation?",
-    "Which brand created Android?",
-    "Which brand makes the Galaxy phones?",
-    "Which brand owns YouTube?",
-    "Which brand makes the Switch console?",
-    "Which brand created the Xbox?",
-    "Which brand makes Air Jordan shoes?",
-    "Which brand has the slogan 'Just Do It'?",
-    "Which brand has a bitten apple logo?",
-    "Which brand created ChatGPT?",
-    "Which brand makes Photoshop?",
-    "Which brand owns WhatsApp?",
-    "Which brand created the Chrome browser?",
-    "Which brand makes the Kindle?",
-    "Which brand owns LinkedIn?",
-    "Which brand created TikTok?",
-    "Which brand makes the Surface laptop?"
+    "Which dinosaur is known as the 'King of the Dinosaurs'?",
+    "Which dinosaur had three horns on its face?",
+    "Which dinosaur had large plates along its back?",
+    "Which dinosaur had a club-like tail?",
+    "Which dinosaur had the longest claws of any known dinosaur?",
+    "Which dinosaur had a long neck and was one of the tallest dinosaurs?",
+    "Which dinosaur is famous for its sickle-shaped claw?",
+    "Which dinosaur had a sail on its back?",
+    "Which dinosaur had a duck-like bill?",
+    "Which dinosaur had a dome-shaped skull?",
+    "Which dinosaur had one of the longest bodies of any dinosaur?",
+    "Which dinosaur was larger than Tyrannosaurus rex in length?",
+    "Which dinosaur had two thin crests on its head?",
+    "Which dinosaur had a long neck with up to 19 vertebrae?",
+    "Which dinosaur was one of the fastest known dinosaurs?",
+    "Which dinosaur had thumb spikes for defense?",
+    "Which dinosaur had a large bony frill and horns?",
+    "Which dinosaur is considered one of the closest non-avian relatives of birds?",
+    "Which dinosaur had armor covering most of its body?",
+    "Which dinosaur was one of the largest meat-eating dinosaurs ever discovered?"
 ];
 let rightAnswers = 0;
 let userAnswers = [];
@@ -43,9 +43,9 @@ let answer;
 let level = -1;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
-let answerList = ["Apple", "Microsoft", "Meta", "Sony", "Google", "Samsung", "Meta", "Nintendo", "Microsoft", "Nike", "Nike", "Apple", "OpenAI", "Adobe", "Meta", "Google", "Amazon", "Microsoft", "ByteDance", "Microsoft"];
+let answerList = ["Tyrannosaurus Rex", "Triceratops", "Stegosaurus", "Ankylosaurus", "Therizinosaurus", "Brachiosaurus", "Velociraptor", "Spinosaurus", "Hadrosaurus", "Pachycephalosaurus", "Diplodocus", "Giganotosaurus", "Dilophosaurus", "Mamenchisaurus", "Ornithomimus", "Iguanodon", "Triceratops", "Troodon", "Ankylosaurus", "Spinosaurus"];
 let progres = document.getElementById("progres");
-let allQuestionAnswers = [["Apple", "Samsung", "Google", "Huawei"], ["Microsoft", "Apple", "Google", "IBM"], ["Meta", "Snap", "Google", "X"], ["Sony", "Nintendo", "Microsoft", "Sega"], ["Google", "Microsoft", "Apple", "Yahoo"], ["Samsung", "Apple", "Xiaomi", "Huawei"], ["Meta", "Google", "Microsoft", "TikTok"], ["Nintendo", "Sony", "Sega", "Atari"], ["Microsoft", "Sony", "Nintendo", "Valve"], ["Nike", "Adidas", "Puma", "Reebok"], ["Puma", "Nike", "Adidas", "Under Armour"], ["Samsung", "Apple", "Google", "Microsoft"], ["OpenAI", "Google", "Anthropic", "Meta"], ["Adobe", "Corel", "Canva", "Autodesk"], ["Google", "Meta", "Telegram", "Apple"], ["Mozilla", "Opera", "Google", "Microsoft"], ["Amazon", "eBay", "Alibaba", "Walmart"], ["Google", "Microsoft", "Apple", "IBM"], ["ByteDance", "Tencent", "Meta", "Google"], ["Dell", "Microsoft", "HP", "Lenovo"]];
+let allQuestionAnswers = [["Allosaurus", "Tyrannosaurus Rex", "Velociraptor", "Carnotaurus"], ["Triceratops", "Styracosaurus", "Protoceratops", "Pentaceratops"], ["Kentrosaurus", "Stegosaurus", "Ankylosaurus", "Iguanodon"], ["Euoplocephalus", "Ankylosaurus", "Stegosaurus", "Nodosaurus"], ["Therizinosaurus", "Deinonychus", "Velociraptor", "Troodon"], ["Diplodocus", "Brachiosaurus", "Apatosaurus", "Camarasaurus"], ["Troodon", "Deinonychus", "Velociraptor", "Utahraptor"], ["Suchomimus", "Baryonyx", "Spinosaurus", "Allosaurus"], ["Parasaurolophus", "Hadrosaurus", "Edmontosaurus", "Iguanodon"], ["Pachycephalosaurus", "Stegoceras", "Stygimoloch", "Dracorex"], ["Diplodocus", "Mamenchisaurus", "Apatosaurus", "Brachiosaurus"], ["Spinosaurus", "Carcharodontosaurus", "Allosaurus", "Giganotosaurus"], ["Dilophosaurus", "Ceratosaurus", "Allosaurus", "Coelophysis"], ["Brachiosaurus", "Diplodocus", "Mamenchisaurus", "Apatosaurus"], ["Gallimimus", "Ornithomimus", "Troodon", "Struthiomimus"], ["Iguanodon", "Parasaurolophus", "Maiasaura", "Ouranosaurus"], ["Styracosaurus", "Pentaceratops", "Triceratops", "Torosaurus"], ["Troodon", "Velociraptor", "Deinonychus", "Compsognathus"], ["Ankylosaurus", "Euoplocephalus", "Nodosaurus", "Stegosaurus"], ["Spinosaurus", "Giganotosaurus", "Carcharodontosaurus", "Mapusaurus"]];
 
 
 let rananswer1 = Math.floor(Math.random() * 4);
@@ -70,6 +70,7 @@ while (
 }
 
 
+
 function random(){
 while (rananswer2 === rananswer1) {
     rananswer2 = Math.floor(Math.random() * 4);
@@ -87,7 +88,6 @@ while (
     rananswer4 = Math.floor(Math.random() * 4);
 }  
 }
-
 
 
 
@@ -157,7 +157,6 @@ if(level == 18){
     next.style.display="none"
     finsh.style.display="block"
 }
-
 level++
     rananswer1 = Math.floor(Math.random() * 4);
     rananswer2 = Math.floor(Math.random() * 4);

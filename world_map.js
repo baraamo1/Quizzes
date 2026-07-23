@@ -11,26 +11,26 @@ let correct = document.getElementById("correct");
 let wrong = document.getElementById("wrong");
 
 let questions = [
-    "Which brand makes the iPhone?",
-    "Which brand created Windows?",
-    "Which brand owns Instagram?",
-    "Which brand makes PlayStation?",
-    "Which brand created Android?",
-    "Which brand makes the Galaxy phones?",
-    "Which brand owns YouTube?",
-    "Which brand makes the Switch console?",
-    "Which brand created the Xbox?",
-    "Which brand makes Air Jordan shoes?",
-    "Which brand has the slogan 'Just Do It'?",
-    "Which brand has a bitten apple logo?",
-    "Which brand created ChatGPT?",
-    "Which brand makes Photoshop?",
-    "Which brand owns WhatsApp?",
-    "Which brand created the Chrome browser?",
-    "Which brand makes the Kindle?",
-    "Which brand owns LinkedIn?",
-    "Which brand created TikTok?",
-    "Which brand makes the Surface laptop?"
+    "Which is the largest country in the world by land area?",
+    "Which country is home to the Amazon Rainforest?",
+    "What country is located between France and Spain?",
+    "Which country is shaped like a boot?",
+    "Which country has the Great Pyramid of Giza?",
+    "Which country is known as the Land of the Rising Sun?",
+    "Which country is both in Europe and Asia?",
+    "Which country has the longest coastline in the world?",
+    "Which country is separated from Australia by the Tasman Sea?",
+    "Which country is the largest in Africa?",
+    "Which country shares a border with both Germany and France?",
+    "Which country is home to Mount Everest?",
+    "Which country has the city of Rio de Janeiro?",
+    "Which country is famous for the Taj Mahal?",
+    "Which country has the city of Istanbul?",
+    "Which country is located directly south of the United States?",
+    "Which country has the largest desert in the world (Sahara)?",
+    "Which country is known for the Great Wall?",
+    "Which country is an island in the Indian Ocean southeast of India?",
+    "Which country borders Germany to the east?"
 ];
 let rightAnswers = 0;
 let userAnswers = [];
@@ -43,10 +43,9 @@ let answer;
 let level = -1;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
-let answerList = ["Apple", "Microsoft", "Meta", "Sony", "Google", "Samsung", "Meta", "Nintendo", "Microsoft", "Nike", "Nike", "Apple", "OpenAI", "Adobe", "Meta", "Google", "Amazon", "Microsoft", "ByteDance", "Microsoft"];
+let answerList = ["Russia", "Brazil", "Andorra", "Italy", "Egypt", "Japan", "Turkey", "Canada", "New Zealand", "Algeria", "Luxembourg", "Nepal", "Brazil", "India", "Turkey", "Mexico", "Algeria", "China", "Sri Lanka", "Poland"];
 let progres = document.getElementById("progres");
-let allQuestionAnswers = [["Apple", "Samsung", "Google", "Huawei"], ["Microsoft", "Apple", "Google", "IBM"], ["Meta", "Snap", "Google", "X"], ["Sony", "Nintendo", "Microsoft", "Sega"], ["Google", "Microsoft", "Apple", "Yahoo"], ["Samsung", "Apple", "Xiaomi", "Huawei"], ["Meta", "Google", "Microsoft", "TikTok"], ["Nintendo", "Sony", "Sega", "Atari"], ["Microsoft", "Sony", "Nintendo", "Valve"], ["Nike", "Adidas", "Puma", "Reebok"], ["Puma", "Nike", "Adidas", "Under Armour"], ["Samsung", "Apple", "Google", "Microsoft"], ["OpenAI", "Google", "Anthropic", "Meta"], ["Adobe", "Corel", "Canva", "Autodesk"], ["Google", "Meta", "Telegram", "Apple"], ["Mozilla", "Opera", "Google", "Microsoft"], ["Amazon", "eBay", "Alibaba", "Walmart"], ["Google", "Microsoft", "Apple", "IBM"], ["ByteDance", "Tencent", "Meta", "Google"], ["Dell", "Microsoft", "HP", "Lenovo"]];
-
+let allQuestionAnswers = [["Russia", "Canada", "China", "United States"], ["Brazil", "Peru", "Colombia", "Venezuela"], ["Andorra", "Monaco", "San Marino", "Liechtenstein"], ["Italy", "Greece", "Portugal", "Croatia"], ["Egypt", "Sudan", "Libya", "Jordan"], ["Japan", "China", "South Korea", "Thailand"], ["Turkey", "Russia", "Kazakhstan", "Georgia"], ["Canada", "Russia", "Indonesia", "Australia"], ["New Zealand", "Fiji", "Papua New Guinea", "Indonesia"], ["Algeria", "Libya", "Sudan", "Chad"], ["Belgium", "Luxembourg", "Netherlands", "Switzerland"], ["Nepal", "Bhutan", "India", "China"], ["Brazil", "Argentina", "Chile", "Peru"], ["India", "Pakistan", "Bangladesh", "Nepal"], ["Turkey", "Greece", "Romania", "Bulgaria"], ["Mexico", "Guatemala", "Belize", "Cuba"], ["Algeria", "Egypt", "Morocco", "Libya"], ["China", "Japan", "South Korea", "Mongolia"], ["Sri Lanka", "Maldives", "Madagascar", "Indonesia"], ["Poland", "Czech Republic", "Austria", "Denmark"]];
 
 let rananswer1 = Math.floor(Math.random() * 4);
 

@@ -11,26 +11,24 @@ let correct = document.getElementById("correct");
 let wrong = document.getElementById("wrong");
 
 let questions = [
-    "Which brand makes the iPhone?",
-    "Which brand created Windows?",
-    "Which brand owns Instagram?",
-    "Which brand makes PlayStation?",
-    "Which brand created Android?",
-    "Which brand makes the Galaxy phones?",
-    "Which brand owns YouTube?",
-    "Which brand makes the Switch console?",
-    "Which brand created the Xbox?",
-    "Which brand makes Air Jordan shoes?",
-    "Which brand has the slogan 'Just Do It'?",
-    "Which brand has a bitten apple logo?",
-    "Which brand created ChatGPT?",
-    "Which brand makes Photoshop?",
-    "Which brand owns WhatsApp?",
-    "Which brand created the Chrome browser?",
-    "Which brand makes the Kindle?",
-    "Which brand owns LinkedIn?",
-    "Which brand created TikTok?",
-    "Which brand makes the Surface laptop?"
+    "Which country speaks Portuguese as its official language?",
+    "Which language is mainly spoken in Brazil?",
+    "Which language uses Hiragana and Katakana?",
+    "Which language is written with Hangul?",
+    "Which language is mainly spoken in Austria?",
+    "How many countries speak French as an official language?",    "Which language uses the Cyrillic alphabet?",
+    "Which language is mainly spoken in Argentina?",
+    "Which country speaks Swedish as its official language?",
+    "Which language is mainly spoken in Iran?",
+    "How many countries have English as an official language?",    "Which language is mainly spoken in Egypt?",
+    "Approximately how many languages are spoken in the world?",
+    "Which language is considered the most famous dead language?",
+    "Which is the most widely spoken language in the world?",  
+    "Which country has the highest number of languages?",
+    "Which language is mainly spoken in Israel?",
+    "Which country speaks Vietnamese as its official language?",
+    "Which language is mainly spoken in Turkey?",
+    "Which language is mainly spoken in South Korea?"
 ];
 let rightAnswers = 0;
 let userAnswers = [];
@@ -43,9 +41,9 @@ let answer;
 let level = -1;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
-let answerList = ["Apple", "Microsoft", "Meta", "Sony", "Google", "Samsung", "Meta", "Nintendo", "Microsoft", "Nike", "Nike", "Apple", "OpenAI", "Adobe", "Meta", "Google", "Amazon", "Microsoft", "ByteDance", "Microsoft"];
+let answerList = ["Portuguese", "Portuguese", "Japanese", "Korean", "German", "29", "Russian", "Spanish", "Swedish", "Persian", "67", "Arabic", "About 7,000", "Latin", "English", "Hungarian", "Hebrew", "Vietnamese", "Turkish", "Korean"];
 let progres = document.getElementById("progres");
-let allQuestionAnswers = [["Apple", "Samsung", "Google", "Huawei"], ["Microsoft", "Apple", "Google", "IBM"], ["Meta", "Snap", "Google", "X"], ["Sony", "Nintendo", "Microsoft", "Sega"], ["Google", "Microsoft", "Apple", "Yahoo"], ["Samsung", "Apple", "Xiaomi", "Huawei"], ["Meta", "Google", "Microsoft", "TikTok"], ["Nintendo", "Sony", "Sega", "Atari"], ["Microsoft", "Sony", "Nintendo", "Valve"], ["Nike", "Adidas", "Puma", "Reebok"], ["Puma", "Nike", "Adidas", "Under Armour"], ["Samsung", "Apple", "Google", "Microsoft"], ["OpenAI", "Google", "Anthropic", "Meta"], ["Adobe", "Corel", "Canva", "Autodesk"], ["Google", "Meta", "Telegram", "Apple"], ["Mozilla", "Opera", "Google", "Microsoft"], ["Amazon", "eBay", "Alibaba", "Walmart"], ["Google", "Microsoft", "Apple", "IBM"], ["ByteDance", "Tencent", "Meta", "Google"], ["Dell", "Microsoft", "HP", "Lenovo"]];
+let allQuestionAnswers = [["Spanish", "Portuguese", "French", "Italian"], ["Portuguese", "Spanish", "French", "Italian"], ["Chinese", "Japanese", "Korean", "Thai"], ["Japanese", "Chinese", "Korean", "Vietnamese"], ["German", "Dutch", "Swedish", "Danish"], ["1", "25","29", "17"], ["Russian", "Ukrainian", "Bulgarian", "Serbian"], ["Portuguese", "Spanish", "Italian", "French"], ["Swedish", "Norwegian", "Danish", "Finnish"], ["Persian", "Arabic", "Turkish", "Urdu"], ["24", "34", "67", "55"], ["Arabic", "Hebrew", "Persian", "Turkish"], ["About 7,000", "About 3,000", "About 5,000", "About 10,000"], ["Latin", "Ancient Egyptian", "Sanskrit", "Old Norse"], ["English", "Mandarin Chinese", "Spanish", "Hindi"], ["India", "Indonesia", "Nigeria", "Papua New Guinea"], ["Hebrew", "Arabic", "Yiddish", "Aramaic"], ["Vietnamese", "Thai", "Chinese", "Khmer"], ["Turkish", "Arabic", "Persian", "Greek"], ["Korean", "Japanese", "Chinese", "Mongolian"]];
 
 
 let rananswer1 = Math.floor(Math.random() * 4);
@@ -132,14 +130,15 @@ answer3.style.display="inline-block"
 answer4.style.display="inline-block"
  answer = answerList[level+1];
 
-if (randomPlace === 0) {
-    randomAnswer1 = answer.indexOf(answer);
-}else if (randomPlace === 1) {
-    randomAnswer2 = answer.indexOf(answer);
-}else if (randomPlace === 2){
-    randomAnswer3 = answer.indexOf(answer);
-}else {
-    randomAnswer4 = answer.indexOf(answer);
+if(level == 0){
+    back.style.display="block"
+}
+if(level == -1 || 0){
+    back.style.display="none"
+}
+if(level == 18){
+    next.style.display="none"
+    finsh.style.display="block"
 }
 
  answer1.textContent = allQuestionAnswers[level + 1][rananswer1] ;
@@ -150,7 +149,7 @@ if (randomPlace === 0) {
 if(level == 0){
     back.style.display="block"
 }
-if(level == -1 || 0){
+if(level == -1){
     back.style.display="none"
 }
 if(level == 18){

@@ -150,7 +150,7 @@ if (randomPlace === 0) {
 if(level == 0){
     back.style.display="block"
 }
-if(level == -1){
+if(level == -1 || 0){
     back.style.display="none"
 }
 if(level == 18){
@@ -206,6 +206,9 @@ if(level == 18){
     next.style.display="block"
         finsh.style.display="none"
 
+}
+if (level == 0){
+    back.style.display="none"
 }
 }
 

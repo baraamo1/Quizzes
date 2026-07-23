@@ -26,7 +26,7 @@ let questions = [
     "Which country's flag has a red and white design with two red bars and a maple leaf?",
     "Which country's flag has green, white, and red vertical stripes?",
     "Which country's flag features the Union Jack and stars representing the Southern Cross?",
-    "Which country's flag has a blue Star of David between two blue stripes?",
+    "Which country's flag features an eagle in the center?", 
     "Which country's flag is red with a white crescent and star?",
     "Which country's flag has a white cross on a red background?",
     "Which country's flag has a red dragon on a green and white background?",
@@ -43,9 +43,9 @@ let answer;
 let level = -1;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
-let answerList = ["United Kingdom", "Japan", "United States", "Canada", "Pakistan", "Bangladesh", "France", "Finland", "Sweden", "China", "Ireland", "Germany", "Canada", "Italy", "Australia", "Israel", "Turkey", "Switzerland", "Wales", "Romania"];
+let answerList = ["United Kingdom", "Japan", "United States", "Canada", "Pakistan", "Bangladesh", "France", "Finland", "Sweden", "China", "Ireland", "Germany", "Canada", "Italy", "Australia", "Egypt", "Turkey", "Switzerland", "Wales", "Romania"];
 let progres = document.getElementById("progres");
-let allQuestionAnswers = [["United Kingdom", "Australia", "New Zealand", "Iceland"], ["Japan", "Bangladesh", "South Korea", "Palau"], ["United States", "Liberia", "Malaysia", "Cuba"], ["Canada", "Austria", "Peru", "Latvia"], ["Pakistan", "Algeria", "Turkey", "Tunisia"], ["Bangladesh", "Japan", "Palau", "Greenland"], ["France", "Netherlands", "Luxembourg", "Russia"], ["Finland", "Sweden", "Norway", "Denmark"], ["Sweden", "Finland", "Norway", "Iceland"], ["China", "Vietnam", "North Korea", "Singapore"], ["Ireland", "Ivory Coast", "Italy", "Mexico"], ["Germany", "Belgium", "Armenia", "Lithuania"], ["Canada", "Austria", "Peru", "Poland"], ["Italy", "Mexico", "Ireland", "Hungary"], ["Australia", "New Zealand", "Fiji", "Tuvalu"], ["Israel", "Greece", "Argentina", "Honduras"], ["Turkey", "Tunisia", "Algeria", "Pakistan"], ["Switzerland", "Denmark", "England", "Georgia"], ["Wales", "Bhutan", "Scotland", "China"], ["Romania", "Chad", "Moldova", "Andorra"]];
+let allQuestionAnswers = [["United Kingdom", "Australia", "New Zealand", "Iceland"], ["Japan", "Bangladesh", "South Korea", "Palau"], ["United States", "Liberia", "Malaysia", "Cuba"], ["Canada", "Austria", "Peru", "Latvia"], ["Pakistan", "Algeria", "Turkey", "Tunisia"], ["Bangladesh", "Japan", "Palau", "Greenland"], ["France", "Netherlands", "Luxembourg", "Russia"], ["Finland", "Sweden", "Norway", "Denmark"], ["Sweden", "Finland", "Norway", "Iceland"], ["China", "Vietnam", "North Korea", "Singapore"], ["Ireland", "Ivory Coast", "Italy", "Mexico"], ["Germany", "Belgium", "Armenia", "Lithuania"], ["Canada", "Austria", "Peru", "Poland"], ["Italy", "Mexico", "Ireland", "Hungary"], ["Australia", "New Zealand", "Fiji", "Tuvalu"], ["Mexico", "Egypt", "Albania", "Germany"], ["Turkey", "Tunisia", "Algeria", "Pakistan"], ["Switzerland", "Denmark", "England", "Georgia"], ["Wales", "Bhutan", "Scotland", "China"], ["Romania", "Chad", "Moldova", "Andorra"]];
 
 
 let rananswer1 = Math.floor(Math.random() * 4);
@@ -150,7 +150,7 @@ if (randomPlace === 0) {
 if(level == 0){
     back.style.display="block"
 }
-if(level == -1){
+if(level == -1 || 0){
     back.style.display="none"
 }
 if(level == 18){
@@ -206,6 +206,9 @@ if(level == 18){
     next.style.display="block"
         finsh.style.display="none"
 
+}
+if (level == 0){
+    back.style.display="none"
 }
 }
 
