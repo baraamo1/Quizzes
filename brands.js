@@ -11,26 +11,26 @@ let correct = document.getElementById("correct");
 let wrong = document.getElementById("wrong");
 
 let questions = [
-    "Which country's flag is known as the Union Jack?",
-    "Which country's flag has a red circle on a white background?",
-    "Which country's flag features 50 stars and 13 stripes?",
-    "Which country's flag has a red maple leaf in the center?",
-    "Which country's flag is green with a white crescent and star?",
-    "Which country's flag has a red circle in the middle of a green background?",
-    "Which country's flag has three vertical stripes: blue, white, and red?",
-    "Which country's flag has a blue cross on a white background?",
-    "Which country's flag has a yellow cross on a blue background?",
-    "Which country's flag has a red background with five yellow stars?",
-    "Which country's flag is green, white, and orange with vertical stripes?",
-    "Which country's flag has black, red, and yellow horizontal stripes?",
-    "Which country's flag has a red and white design with two red bars and a maple leaf?",
-    "Which country's flag has green, white, and red vertical stripes?",
-    "Which country's flag features the Union Jack and stars representing the Southern Cross?",
-    "Which country's flag has a blue Star of David between two blue stripes?",
-    "Which country's flag is red with a white crescent and star?",
-    "Which country's flag has a white cross on a red background?",
-    "Which country's flag has a red dragon on a green and white background?",
-    "Which country's flag has a blue, yellow, and red vertical tricolor?"
+    "Which brand makes the iPhone?",
+    "Which brand created Windows?",
+    "Which brand owns Instagram?",
+    "Which brand makes PlayStation?",
+    "Which brand created Android?",
+    "Which brand makes the Galaxy phones?",
+    "Which brand owns YouTube?",
+    "Which brand makes the Switch console?",
+    "Which brand created the Xbox?",
+    "Which brand makes Air Jordan shoes?",
+    "Which brand has the slogan 'Just Do It'?",
+    "Which brand has a bitten apple logo?",
+    "Which brand created ChatGPT?",
+    "Which brand makes Photoshop?",
+    "Which brand owns WhatsApp?",
+    "Which brand created the Chrome browser?",
+    "Which brand makes the Kindle?",
+    "Which brand owns LinkedIn?",
+    "Which brand created TikTok?",
+    "Which brand makes the Surface laptop?"
 ];
 let rightAnswers = 0;
 let userAnswers = [];
@@ -43,9 +43,9 @@ let answer;
 let level = -1;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
-let answerList = ["United Kingdom", "Japan", "United States", "Canada", "Pakistan", "Bangladesh", "France", "Finland", "Sweden", "China", "Ireland", "Germany", "Canada", "Italy", "Australia", "Israel", "Turkey", "Switzerland", "Wales", "Romania"];
+let answerList = ["Apple", "Microsoft", "Meta", "Sony", "Google", "Samsung", "Meta", "Nintendo", "Microsoft", "Nike", "Nike", "Apple", "OpenAI", "Adobe", "Meta", "Google", "Amazon", "Microsoft", "ByteDance", "Microsoft"];
 let progres = document.getElementById("progres");
-let allQuestionAnswers = [["United Kingdom", "Australia", "New Zealand", "Iceland"], ["Japan", "Bangladesh", "South Korea", "Palau"], ["United States", "Liberia", "Malaysia", "Cuba"], ["Canada", "Austria", "Peru", "Latvia"], ["Pakistan", "Algeria", "Turkey", "Tunisia"], ["Bangladesh", "Japan", "Palau", "Greenland"], ["France", "Netherlands", "Luxembourg", "Russia"], ["Finland", "Sweden", "Norway", "Denmark"], ["Sweden", "Finland", "Norway", "Iceland"], ["China", "Vietnam", "North Korea", "Singapore"], ["Ireland", "Ivory Coast", "Italy", "Mexico"], ["Germany", "Belgium", "Armenia", "Lithuania"], ["Canada", "Austria", "Peru", "Poland"], ["Italy", "Mexico", "Ireland", "Hungary"], ["Australia", "New Zealand", "Fiji", "Tuvalu"], ["Israel", "Greece", "Argentina", "Honduras"], ["Turkey", "Tunisia", "Algeria", "Pakistan"], ["Switzerland", "Denmark", "England", "Georgia"], ["Wales", "Bhutan", "Scotland", "China"], ["Romania", "Chad", "Moldova", "Andorra"]];
+let allQuestionAnswers = [["Apple", "Samsung", "Google", "Huawei"], ["Microsoft", "Apple", "Google", "IBM"], ["Meta", "Snap", "Google", "X"], ["Sony", "Nintendo", "Microsoft", "Sega"], ["Google", "Microsoft", "Apple", "Yahoo"], ["Samsung", "Apple", "Xiaomi", "Huawei"], ["Meta", "Google", "Microsoft", "TikTok"], ["Nintendo", "Sony", "Sega", "Atari"], ["Microsoft", "Sony", "Nintendo", "Valve"], ["Nike", "Adidas", "Puma", "Reebok"], ["Puma", "Nike", "Adidas", "Under Armour"], ["Samsung", "Apple", "Google", "Microsoft"], ["OpenAI", "Google", "Anthropic", "Meta"], ["Adobe", "Corel", "Canva", "Autodesk"], ["Google", "Meta", "Telegram", "Apple"], ["Mozilla", "Opera", "Google", "Microsoft"], ["Amazon", "eBay", "Alibaba", "Walmart"], ["Google", "Microsoft", "Apple", "IBM"], ["ByteDance", "Tencent", "Meta", "Google"], ["Dell", "Microsoft", "HP", "Lenovo"]];
 
 
 let rananswer1 = Math.floor(Math.random() * 4);

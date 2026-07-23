@@ -11,26 +11,26 @@ let correct = document.getElementById("correct");
 let wrong = document.getElementById("wrong");
 
 let questions = [
-    "Which country's flag is known as the Union Jack?",
-    "Which country's flag has a red circle on a white background?",
-    "Which country's flag features 50 stars and 13 stripes?",
-    "Which country's flag has a red maple leaf in the center?",
-    "Which country's flag is green with a white crescent and star?",
-    "Which country's flag has a red circle in the middle of a green background?",
-    "Which country's flag has three vertical stripes: blue, white, and red?",
-    "Which country's flag has a blue cross on a white background?",
-    "Which country's flag has a yellow cross on a blue background?",
-    "Which country's flag has a red background with five yellow stars?",
-    "Which country's flag is green, white, and orange with vertical stripes?",
-    "Which country's flag has black, red, and yellow horizontal stripes?",
-    "Which country's flag has a red and white design with two red bars and a maple leaf?",
-    "Which country's flag has green, white, and red vertical stripes?",
-    "Which country's flag features the Union Jack and stars representing the Southern Cross?",
-    "Which country's flag has a blue Star of David between two blue stripes?",
-    "Which country's flag is red with a white crescent and star?",
-    "Which country's flag has a white cross on a red background?",
-    "Which country's flag has a red dragon on a green and white background?",
-    "Which country's flag has a blue, yellow, and red vertical tricolor?"
+    "What is 2 + 3?",
+    "What is 10 - 4?",
+    "What is 5 × 6?",
+    "What is 36 ÷ 6?",
+    "What is 9 × 8?",
+    "What is 15 + 28?",
+    "What is 84 ÷ 7?",
+    "What is 12²?",
+    "What is the square root of 196?",
+    "What is 17 × 9?",
+    "What is 125 ÷ 5?",
+    "What is 18²?",
+    "What is the cube of 5?",
+    "What is 144 ÷ 12 + 8 × 2?",
+    "What is 25% of 200?",
+    "What is 3⁴?",
+    "If a triangle has angles of 50° and 60°, what is the third angle?",
+    "What is the value of π rounded to 2 decimal places?",
+    "Solve: 7 × (12 - 5) + 9",
+    "What is the square root of 2025?"
 ];
 let rightAnswers = 0;
 let userAnswers = [];
@@ -43,9 +43,9 @@ let answer;
 let level = -1;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
-let answerList = ["United Kingdom", "Japan", "United States", "Canada", "Pakistan", "Bangladesh", "France", "Finland", "Sweden", "China", "Ireland", "Germany", "Canada", "Italy", "Australia", "Israel", "Turkey", "Switzerland", "Wales", "Romania"];
+let answerList = ["5", "6", "30", "6", "72", "43", "12", "144", "14", "153", "25", "324", "125", "28", "50", "81", "70", "3.14", "58", "45"];
 let progres = document.getElementById("progres");
-let allQuestionAnswers = [["United Kingdom", "Australia", "New Zealand", "Iceland"], ["Japan", "Bangladesh", "South Korea", "Palau"], ["United States", "Liberia", "Malaysia", "Cuba"], ["Canada", "Austria", "Peru", "Latvia"], ["Pakistan", "Algeria", "Turkey", "Tunisia"], ["Bangladesh", "Japan", "Palau", "Greenland"], ["France", "Netherlands", "Luxembourg", "Russia"], ["Finland", "Sweden", "Norway", "Denmark"], ["Sweden", "Finland", "Norway", "Iceland"], ["China", "Vietnam", "North Korea", "Singapore"], ["Ireland", "Ivory Coast", "Italy", "Mexico"], ["Germany", "Belgium", "Armenia", "Lithuania"], ["Canada", "Austria", "Peru", "Poland"], ["Italy", "Mexico", "Ireland", "Hungary"], ["Australia", "New Zealand", "Fiji", "Tuvalu"], ["Israel", "Greece", "Argentina", "Honduras"], ["Turkey", "Tunisia", "Algeria", "Pakistan"], ["Switzerland", "Denmark", "England", "Georgia"], ["Wales", "Bhutan", "Scotland", "China"], ["Romania", "Chad", "Moldova", "Andorra"]];
+let allQuestionAnswers = [["4", "5", "6", "7"], ["5", "6", "7", "8"], ["25", "30", "35", "40"], ["5", "6", "8", "9"], ["64", "72", "81", "90"], ["42", "43", "44", "45"], ["11", "12", "14", "16"], ["121", "144", "169", "196"], ["12", "13", "14", "15"], ["144", "153", "162", "171"], ["20", "24", "25", "30"], ["289", "324", "361", "400"], ["64", "125", "216", "343"], ["26", "28", "30", "32"], ["25", "40", "50", "75"], ["64", "81", "100", "125"], ["60", "70", "80", "90"], ["3.12", "3.14", "3.16", "3.18"], ["49", "56", "58", "63"], ["40", "42", "44", "45"]];
 
 
 let rananswer1 = Math.floor(Math.random() * 4);

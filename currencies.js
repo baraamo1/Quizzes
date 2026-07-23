@@ -72,7 +72,23 @@ while (
 }
 
 
+function random(){
+while (rananswer2 === rananswer1) {
+    rananswer2 = Math.floor(Math.random() * 4);
+}
 
+while (rananswer3 === rananswer1 || rananswer3 === rananswer2) {
+    rananswer3 = Math.floor(Math.random() * 4);
+}
+
+while (
+    rananswer4 === rananswer1 ||
+    rananswer4 === rananswer2 ||
+    rananswer4 === rananswer3
+) {
+    rananswer4 = Math.floor(Math.random() * 4);
+}  
+}
 
 
 
@@ -145,6 +161,13 @@ if(level == 18){
 }
 
 level++
+    rananswer1 = Math.floor(Math.random() * 4);
+    rananswer2 = Math.floor(Math.random() * 4);
+    rananswer3 = Math.floor(Math.random() * 4);
+    rananswer4 = Math.floor(Math.random() * 4);
+    random()
+
+console.log(rananswer1,rananswer2,rananswer3,rananswer4)
 }
 
 

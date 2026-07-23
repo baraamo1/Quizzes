@@ -46,18 +46,7 @@ let mainQuestion = document.getElementById("mainqs");
 let answerList = ["Lion", "Giraffe", "Elephant", "Penguin", "Kangaroo", "Zebra", "Cheetah", "Dog", "Bat", "Chameleon", "Blue Whale", "Turtle", "Ostrich", "Beaver", "Octopus", "Platypus", "Crocodile", "Parrot", "Pangolin", "Sperm Whale"];
 let progres = document.getElementById("progres");
 let allQuestionAnswers = [["Lion", "Tiger", "Owl", "Goat"], ["Kangaroo", "Camel", "Flamingo", "Giraffe"], ["Octopus", "Elephant", "Giraffe", "Crocodile"], ["Penguin", "Owl", "Falcon", "Flamingo"], ["Octopus", "Crocodile", "Kangaroo", "Eagle"], ["Tiger", "Snake", "Zebra", "Penguin"], ["Tiger", "Sheep", "Dog", "Cheetah"], ["Flamingo", "Dog", "Goat", "Monkey"], ["Bat", "Owl", "Parrot", "Eagle"], ["Platypus", "Chameleon", "Rhinoceros", "Turtle"], ["Jellyfish", "Whale", "Elephant", "Blue Whale"], ["Camel", "Turtle", "Crocodile", "Panda"], ["Hippopotamus", "Leopard", "Ostrich", "Platypus"], ["Flamingo", "Bear", "Beaver", "Donkey"], ["Octopus", "Parrot", "Falcon", "Jellyfish"], ["Bat", "Chameleon", "Rabbit", "Platypus"], ["Tiger", "Lion", "Crocodile", "Cheetah"], ["Parrot", "Flamingo", "Bat", "Eagle"], ["Pangolin", "Crocodile", "Chimpanzee", "Snake"], ["Octopus", "Sperm Whale", "Turtle", "Shark"]];
-let randomAnswer1 = Math.floor(
-    Math.random() * 50
-)
-let randomAnswer2 = Math.floor(
-    Math.random() * 50
-)
-let randomAnswer3 = Math.floor(
-    Math.random() * 50
-)
-let randomAnswer4 = Math.floor(
-    Math.random() * 50
-)
+
 
 let rananswer1 = Math.floor(Math.random() * 4);
 
@@ -80,7 +69,23 @@ while (
     rananswer4 = Math.floor(Math.random() * 4);
 }
 
+function random(){
+while (rananswer2 === rananswer1) {
+    rananswer2 = Math.floor(Math.random() * 4);
+}
 
+while (rananswer3 === rananswer1 || rananswer3 === rananswer2) {
+    rananswer3 = Math.floor(Math.random() * 4);
+}
+
+while (
+    rananswer4 === rananswer1 ||
+    rananswer4 === rananswer2 ||
+    rananswer4 === rananswer3
+) {
+    rananswer4 = Math.floor(Math.random() * 4);
+}  
+}
 
 
 
@@ -154,6 +159,13 @@ if(level == 18){
 }
 
 level++
+    rananswer1 = Math.floor(Math.random() * 4);
+    rananswer2 = Math.floor(Math.random() * 4);
+    rananswer3 = Math.floor(Math.random() * 4);
+    rananswer4 = Math.floor(Math.random() * 4);
+    random()
+
+console.log(rananswer1,rananswer2,rananswer3,rananswer4)
 }
 
 

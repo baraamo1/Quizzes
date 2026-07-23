@@ -11,26 +11,26 @@ let correct = document.getElementById("correct");
 let wrong = document.getElementById("wrong");
 
 let questions = [
-    "Which country's flag is known as the Union Jack?",
-    "Which country's flag has a red circle on a white background?",
-    "Which country's flag features 50 stars and 13 stripes?",
-    "Which country's flag has a red maple leaf in the center?",
-    "Which country's flag is green with a white crescent and star?",
-    "Which country's flag has a red circle in the middle of a green background?",
-    "Which country's flag has three vertical stripes: blue, white, and red?",
-    "Which country's flag has a blue cross on a white background?",
-    "Which country's flag has a yellow cross on a blue background?",
-    "Which country's flag has a red background with five yellow stars?",
-    "Which country's flag is green, white, and orange with vertical stripes?",
-    "Which country's flag has black, red, and yellow horizontal stripes?",
-    "Which country's flag has a red and white design with two red bars and a maple leaf?",
-    "Which country's flag has green, white, and red vertical stripes?",
-    "Which country's flag features the Union Jack and stars representing the Southern Cross?",
-    "Which country's flag has a blue Star of David between two blue stripes?",
-    "Which country's flag is red with a white crescent and star?",
-    "Which country's flag has a white cross on a red background?",
-    "Which country's flag has a red dragon on a green and white background?",
-    "Which country's flag has a blue, yellow, and red vertical tricolor?"
+    "Which car brand uses the three-pointed star logo?",
+    "Which car brand uses the prancing horse logo?",
+    "Which car brand uses the four rings logo?",
+    "Which car brand uses the blue and white roundel logo?",
+    "Which car brand uses the raging bull logo?",
+    "Which car brand uses the lion logo?",
+    "Which car brand uses the bowtie logo?",
+    "Which car brand uses the H logo?",
+    "Which car brand uses the T logo?",
+    "Which car brand uses the star cluster logo?",
+    "Which car brand uses the Spirit of Ecstasy mascot?",
+    "Which car brand uses the trident logo?",
+    "Which car brand uses the V-shaped logo?",
+    "Which car brand uses the diamond logo?",
+    "Which car brand uses the winged arrow logo?",
+    "Which car brand uses the blue oval logo?",
+    "Which car brand uses the ram head logo?",
+    "Which car brand uses the snake and cross logo?",
+    "Which car brand uses the scorpion logo?",
+    "Which car brand uses the crest logo with a black horse?"
 ];
 let rightAnswers = 0;
 let userAnswers = [];
@@ -43,9 +43,9 @@ let answer;
 let level = -1;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
-let answerList = ["United Kingdom", "Japan", "United States", "Canada", "Pakistan", "Bangladesh", "France", "Finland", "Sweden", "China", "Ireland", "Germany", "Canada", "Italy", "Australia", "Israel", "Turkey", "Switzerland", "Wales", "Romania"];
+let answerList = ["Mercedes-Benz", "Ferrari", "Audi", "BMW", "Lamborghini", "Peugeot", "Chevrolet", "Honda", "Toyota", "Subaru", "Rolls-Royce", "Maserati", "Infiniti", "Renault", "Škoda", "Ford", "Ram", "Alfa Romeo", "Abarth", "Porsche"];
 let progres = document.getElementById("progres");
-let allQuestionAnswers = [["United Kingdom", "Australia", "New Zealand", "Iceland"], ["Japan", "Bangladesh", "South Korea", "Palau"], ["United States", "Liberia", "Malaysia", "Cuba"], ["Canada", "Austria", "Peru", "Latvia"], ["Pakistan", "Algeria", "Turkey", "Tunisia"], ["Bangladesh", "Japan", "Palau", "Greenland"], ["France", "Netherlands", "Luxembourg", "Russia"], ["Finland", "Sweden", "Norway", "Denmark"], ["Sweden", "Finland", "Norway", "Iceland"], ["China", "Vietnam", "North Korea", "Singapore"], ["Ireland", "Ivory Coast", "Italy", "Mexico"], ["Germany", "Belgium", "Armenia", "Lithuania"], ["Canada", "Austria", "Peru", "Poland"], ["Italy", "Mexico", "Ireland", "Hungary"], ["Australia", "New Zealand", "Fiji", "Tuvalu"], ["Israel", "Greece", "Argentina", "Honduras"], ["Turkey", "Tunisia", "Algeria", "Pakistan"], ["Switzerland", "Denmark", "England", "Georgia"], ["Wales", "Bhutan", "Scotland", "China"], ["Romania", "Chad", "Moldova", "Andorra"]];
+let allQuestionAnswers = [["Audi", "Mercedes-Benz", "Volvo", "BMW"], ["Ferrari", "Porsche", "Maserati", "Lamborghini"], ["BMW", "Volkswagen", "Mercedes-Benz", "Audi"], ["BMW", "Mercedes-Benz", "Lexus", "Audi"], ["Lamborghini", "Ferrari", "Maserati", "Porsche"], ["Citroën", "Renault", "Peugeot", "Opel"], ["Chevrolet", "Ford", "Dodge", "GMC"], ["Honda", "Toyota", "Hyundai", "Nissan"], ["Honda", "Toyota", "Mazda", "Nissan"], ["Suzuki", "Mazda", "Subaru", "Mitsubishi"], ["Jaguar", "Rolls-Royce", "Bentley", "Aston Martin"], ["Lancia", "Ferrari", "Maserati", "Alfa Romeo"], ["Lexus", "Genesis", "Acura", "Infiniti"], ["Citroën", "Peugeot", "Fiat", "Renault"], ["Seat", "Opel", "Volkswagen", "Škoda"], ["Ford", "Ram", "Chevrolet", "Jeep"], ["Ford", "Ram", "Jeep", "GMC"], ["Ferrari", "Alfa Romeo", "Fiat", "Maserati"], ["Lancia", "Alfa Romeo", "Abarth", "Fiat"], ["Bugatti", "Ferrari", "Porsche", "Lamborghini"]];
 
 
 let rananswer1 = Math.floor(Math.random() * 4);
@@ -70,6 +70,7 @@ while (
 }
 
 
+
 function random(){
 while (rananswer2 === rananswer1) {
     rananswer2 = Math.floor(Math.random() * 4);
@@ -87,7 +88,6 @@ while (
     rananswer4 = Math.floor(Math.random() * 4);
 }  
 }
-
 
 
 
