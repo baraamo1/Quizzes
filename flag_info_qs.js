@@ -9,7 +9,7 @@ let finsh = document.getElementById("finsh");
 let randomPlace = Math.floor(Math.random() * 4);
 let correct = document.getElementById("correct");
 let wrong = document.getElementById("wrong");
-
+ 
 let questions = [
     "Which country's flag is known as the Union Jack?",
     "Which country's flag has a red circle on a white background?",
