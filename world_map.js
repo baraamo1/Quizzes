@@ -27,7 +27,7 @@ let questions = [
     "Which country is famous for the Taj Mahal?",
     "Which country has the city of Istanbul?",
     "Which country is located directly south of the United States?",
-    "Which country has the largest desert in the world (Sahara)?",
+    "Which country contains the largest portion of the Sahara Desert?",
     "Which country is known for the Great Wall?",
     "Which country is an island in the Indian Ocean southeast of India?",
     "Which country borders Germany to the east?"
@@ -45,7 +45,7 @@ let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
 let answerList = ["Russia", "Brazil", "Andorra", "Italy", "Egypt", "Japan", "Turkey", "Canada", "New Zealand", "Algeria", "Luxembourg", "Nepal", "Brazil", "India", "Turkey", "Mexico", "Algeria", "China", "Sri Lanka", "Poland"];
 let progres = document.getElementById("progres");
-let allQuestionAnswers = [["Russia", "Canada", "China", "United States"], ["Brazil", "Peru", "Colombia", "Venezuela"], ["Andorra", "Monaco", "San Marino", "Liechtenstein"], ["Italy", "Greece", "Portugal", "Croatia"], ["Egypt", "Sudan", "Libya", "Jordan"], ["Japan", "China", "South Korea", "Thailand"], ["Turkey", "Russia", "Kazakhstan", "Georgia"], ["Canada", "Russia", "Indonesia", "Australia"], ["New Zealand", "Fiji", "Papua New Guinea", "Indonesia"], ["Algeria", "Libya", "Sudan", "Chad"], ["Belgium", "Luxembourg", "Netherlands", "Switzerland"], ["Nepal", "Bhutan", "India", "China"], ["Brazil", "Argentina", "Chile", "Peru"], ["India", "Pakistan", "Bangladesh", "Nepal"], ["Turkey", "Greece", "Romania", "Bulgaria"], ["Mexico", "Guatemala", "Belize", "Cuba"], ["Algeria", "Egypt", "Morocco", "Libya"], ["China", "Japan", "South Korea", "Mongolia"], ["Sri Lanka", "Maldives", "Madagascar", "Indonesia"], ["Poland", "Czech Republic", "Austria", "Denmark"]];
+let allQuestionAnswers = [["Russia", "Canada", "China", "United States"], ["Brazil", "Peru", "Colombia", "Venezuela"], ["Andorra", "Monaco", "San Marino", "Liechtenstein"], ["Italy", "Greece", "Portugal", "Croatia"], ["Egypt", "Sudan", "Libya", "Jordan"], ["Japan", "China", "South Korea", "Thailand"], ["Turkey", "Egypt", "Kazakhstan", "Georgia"], ["Canada", "Russia", "Indonesia", "Australia"], ["New Zealand", "Fiji", "Papua New Guinea", "Indonesia"], ["Algeria", "Libya", "Sudan", "Chad"], ["Belgium", "Luxembourg", "Netherlands", "Switzerland"], ["Nepal", "Bhutan", "India", "China"], ["Brazil", "Argentina", "Chile", "Peru"], ["India", "Pakistan", "Bangladesh", "Nepal"], ["Turkey", "Greece", "Romania", "Bulgaria"], ["Mexico", "Guatemala", "Belize", "Cuba"], ["Algeria", "Egypt", "Morocco", "Libya"], ["China", "Japan", "South Korea", "Mongolia"], ["Sri Lanka", "Maldives", "Madagascar", "Indonesia"], ["Poland", "Czech Republic", "Austria", "Denmark"]];
 
 let rananswer1 = Math.floor(Math.random() * 4);
 

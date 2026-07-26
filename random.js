@@ -9,15 +9,15 @@ let allQuestionAnswers = [["Lion", "Tiger", "Owl", "Goat"],
 ["Bat", "Owl", "Parrot", "Eagle"],
 ["Platypus", "Chameleon", "Rhinoceros", "Turtle"],
 ["Jellyfish", "Whale", "Elephant", "Blue Whale"],
-["Camel", "Turtle", "Crocodile", "Panda"],
+["Camel", "Turtle", "Giant Tortoise", "Panda"],
 ["Hippopotamus", "Leopard", "Ostrich", "Platypus"],
 ["Flamingo", "Bear", "Beaver", "Donkey"],
 ["Octopus", "Parrot", "Falcon", "Jellyfish"],
 ["Bat", "Chameleon", "Rabbit", "Platypus"],
-["Tiger", "Lion", "Crocodile", "Cheetah"], 
+["Hippopotamus", "Lion", "Crocodile", "Shark"], 
 ["Parrot", "Flamingo", "Bat", "Eagle"],
 ["Pangolin", "Crocodile", "Chimpanzee", "Snake"],
-["Octopus", "Sperm Whale", "Turtle", "Shark"],
+["Octopus", "Sperm Whale", "Orca", "Shark"],
 ["Apple", "Samsung", "Google", "Huawei"],
 ["Microsoft", "Apple", "Google", "IBM"], 
 ["Meta", "Snap", "Google", "X"],
@@ -46,7 +46,7 @@ let allQuestionAnswers = [["Lion", "Tiger", "Owl", "Goat"],
 ["Citroën", "Renault", "Peugeot", "Opel"],
 ["Chevrolet", "Ford", "Dodge", "GMC"],
 ["Honda", "Toyota", "Hyundai", "Nissan"],
-["Honda", "Toyota", "Mazda", "Nissan"],
+["Tesla", "Toyota", "Porsche", "Nissan"],
 ["Suzuki", "Mazda", "Subaru", "Mitsubishi"],
 ["Jaguar", "Rolls-Royce", "Bentley", "Aston Martin"],
 ["Lancia", "Ferrari", "Maserati", "Alfa Romeo"],
@@ -61,13 +61,14 @@ let allQuestionAnswers = [["Lion", "Tiger", "Owl", "Goat"],
 ["Real", "Peso", "Ruble", "Rand"],
 ["Thailand", "Vietnam", "Cambodia", "Laos"],
 ["Yen", "Yuan", "Won", "Baht"],
-["20", "18", "22", "25"],
-["Dollar", "Euro", "Pound Sterling", "Yen"], 
+["20", "21", "18", "25"],
+["US Dollar", "Euro", "Pound Sterling", "Yen"], 
 ["Kuwait", "Bahrain", "United Kingdom", "Switzerland"],
 ["Hungary", "Poland", "Romania", "Czech Republic"],
 ["Swiss Franc", "Euro", "Krone", "Pound Sterling"],
 ["Indian Rupee", "Pakistani Rupee", "Nepalese Rupee", "Sri Lankan Rupee"],
-["1", "2", "5", "10"], ["Vietnam", "Thailand", "China", "South Korea"], 
+["1", "11", "5", "10"],
+ ["Vietnam", "Thailand", "China", "South Korea"], 
 ["Lira", "Ruble", "Riyal", "Dirham"],
 ["Ruble", "Hryvnia", "Tenge", "Som"],
 ["Poland", "Hungary", "Czech Republic", "Slovakia"], 
@@ -224,9 +225,10 @@ let wrong = document.getElementById("wrong");
 
 
 
+let questions = [ 
 
-let questions = [
-    "Which animal is known as the King of the Jungle?",
+
+    "Which animal is known as the King of the Jungle?",
     "Which animal has a very long neck?",
     "Which animal is the largest land animal?",
     "Which bird cannot fly but can swim?",
@@ -455,7 +457,7 @@ let answer;
 let level = -1;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
-let answerList = ["Lion", "Giraffe", "Elephant", "Penguin", "Kangaroo", "Zebra", "Cheetah", "Dog", "Bat", "Chameleon", "Blue Whale", "Giant Tortoise", "Ostrich", "Beaver", "Octopus", "Platypus", "Hippopotamus", "Parrot", "Pangolin", "Orca", "Apple", "Microsoft", "Meta", "Sony", "Google", "Samsung", "Google", "Nintendo", "Microsoft", "Nike", "Nike", "Apple", "OpenAI", "Adobe", "Meta", "Google", "Amazon", "Microsoft", "ByteDance", "Microsoft", "Mercedes-Benz", "Ferrari", "Audi", "BMW", "Lamborghini", "Peugeot", "Chevrolet", "Honda", "Tesla", "Subaru", "Rolls-Royce", "Maserati", "Citroën", "Renault", "Škoda", "Ford", "Ram", "Alfa Romeo", "Abarth", "Porsche", "Real", "Thailand", "Japan", "20", "US Dollar", "Kuwait", "Hungary", "Swiss Franc", "India", "11", "Vietnam", "Turkish Lira", "Russian Ruble", "Poland", "Norwegian Krone", "Turkish Lira", "Euro", "Kazakhstan", "South African Rand", "South Africa", "Tyrannosaurus rex", "Triceratops", "Stegosaurus", "Ankylosaurus", "Therizinosaurus", "Brachiosaurus", "Velociraptor", "Spinosaurus", "Hadrosaurus", "Pachycephalosaurus", "Diplodocus", "Spinosaurus", "Dilophosaurus", "Mamenchisaurus", "Ornithomimus", "Iguanodon", "Triceratops", "Velociraptor", "Ankylosaurus", "Giganotosaurus", "United Kingdom", "Japan", "United States", "Canada", "Pakistan", "Bangladesh", "France", "Finland", "Sweden", "China", "Ireland", "Germany", "Canada", "Italy", "New Zealand", "Mexico", "Turkey", "Switzerland", "Wales", "Romania", "Durian", "Japan", "Mozzarella", "Jackfruit", "Mexico", "Natto", "France", "Potato", "South Korea", "Mozzarella", "Switzerland", "Banana", "Spain", "Peanut", "Canada", "Strawberry", "India", "Wheat", "Turkey", "Avocado", "Brazil", "Portuguese", "Japanese", "Korean", "German", "29", "Russian", "Spanish", "Sweden", "Persian", "67", "Arabic", "7000", "Latin", "English", "Papua New Guinea", "Arabic", "11", "Hindi", "Mandarin Chinese", "5", "6", "30", "6", "72", "43", "12", "144", "14", "153", "25", "324", "125", "28", "50", "81", "70", "3.14", "58", "45", "Soccer", "11", "Badminton", "Qatar", "6", "Tennis", "Cricket", "Canada", "5", "Basketball", "Argentina", "Gymnastics", "147", "Cycling", "Japan", "Every 4 years", "Golf", "Brazil", "Ice Hockey", "Gymnastics", "Russia", "Brazil", "Andorra", "Italy", "Egypt", "Japan", "Turkey", "Canada", "New Zealand", "Algeria", "Luxembourg", "Nepal", "Brazil", "India", "Turkey", "Mexico", "Algeria", "China", "Sri Lanka", "Poland"];
+let answerList = ["Lion", "Giraffe", "Elephant", "Penguin", "Kangaroo", "Zebra", "Cheetah", "Dog", "Bat", "Chameleon", "Blue Whale", "Giant Tortoise", "Ostrich", "Beaver", "Octopus", "Platypus", "Hippopotamus", "Parrot", "Pangolin", "Orca", "Apple", "Microsoft", "Meta", "Sony", "Google", "Samsung", "Google", "Nintendo", "Microsoft", "Nike", "Nike", "Apple", "OpenAI", "Adobe", "Meta", "Google", "Amazon", "Microsoft", "ByteDance", "Microsoft", "Mercedes-Benz", "Ferrari", "Audi", "BMW", "Lamborghini", "Peugeot", "Chevrolet", "Honda", "Tesla", "Subaru", "Rolls-Royce", "Maserati", "Citroën", "Renault", "Škoda", "Ford", "Ram", "Alfa Romeo", "Abarth", "Porsche", "Real", "Thailand", "Yen", "21", "US Dollar", "Kuwait", "Hungary", "Swiss Franc", "Indian Rupee", "11", "Vietnam", "Lira", "Ruble", "Poland", "Krone", "Turkish Lira", "Euro", "Kazakhstan", "Rand", "South Africa", "Tyrannosaurus Rex", "Triceratops", "Stegosaurus", "Ankylosaurus", "Therizinosaurus", "Brachiosaurus", "Velociraptor", "Spinosaurus", "Hadrosaurus", "Pachycephalosaurus", "Diplodocus", "Spinosaurus", "Dilophosaurus", "Mamenchisaurus", "Ornithomimus", "Iguanodon", "Triceratops", "Velociraptor", "Ankylosaurus", "Giganotosaurus", "United Kingdom", "Japan", "United States", "Canada", "Pakistan", "Bangladesh", "France", "Finland", "Sweden", "China", "Ireland", "Germany", "Canada", "Italy", "New Zealand", "Mexico", "Turkey", "Switzerland", "Wales", "Romania", "Durian", "Japan", "Mozzarella", "Jackfruit", "Mexico", "Natto", "France", "Potato", "South Korea", "Mozzarella", "Switzerland", "Banana", "Spain", "Peanut", "Canada", "Strawberry", "India", "Wheat", "Turkey", "Avocado", "Brazil", "Portuguese", "Japanese", "Korean", "German", "29", "Russian", "Spanish", "Sweden", "Persian", "67", "Arabic", "About 7,000", "Latin", "English", "Papua New Guinea", "Arabic", "11", "Hindi", "Mandarin Chinese", "5", "6", "30", "6", "72", "43", "12", "144", "14", "153", "25", "324", "125", "28", "50", "81", "70", "3.14", "58", "45", "Soccer", "11", "Badminton", "Qatar", "6", "Tennis", "Cricket", "Canada", "5", "Basketball", "Argentina", "Gymnastics", "147", "Cycling", "Japan", "4 years", "Golf", "Brazil", "Ice Hockey", "Gymnastics", "Russia", "Brazil", "Andorra", "Italy", "Egypt", "Japan", "Turkey", "Canada", "New Zealand", "Algeria", "Luxembourg", "Nepal", "Brazil", "India", "Turkey", "Mexico", "Algeria", "China", "Sri Lanka", "Poland"];
 let progres = document.getElementById("progres");
 
 let ranqu = Math.floor(
@@ -503,9 +505,16 @@ while (
 }  
 }
 
-
-
-
+function backup(){
+ranqu = Math.floor(
+    Math.random()*220
+)
+}
+function notEqual() {
+    while (saves.includes(ranqu)) {
+        backup();
+    }
+}
 function checkRightAnswer1(){
     yourAnswer.textContent = `You selected : ${answer1.textContent}`;
 userAnswers[level] = answer1.textContent
@@ -536,27 +545,44 @@ text[level] = yourAnswer.textContent
 
 
 function NEXTfUNCTION (){
+
+
+if (saves[level + 1] === undefined) {
+    do {
+        ranqu = Math.floor(Math.random() * questions.length);
+    } while (saves.includes(ranqu));
+
+    saves[level + 1] = ranqu;
+}
+
+ranqu = saves[level + 1];
+
+
+
+saves[level+1] = ranqu
+
+
     progres.textContent = `Level : ${level + 2}/20`
  yourAnswer.textContent = text[level +1]
-mainQuestion.textContent = questions[ranqu]
+mainQuestion.textContent = questions[saves[level+1]]
 QuestionNum.textContent = `${level+2}.`
 answer1.style.display="inline-block"
 answer2.style.display="inline-block"
 answer3.style.display="inline-block"
 answer4.style.display="inline-block"
- answer = answerList[ranqu];
-saves = 
 
+console.log(saves)
 
- answer1.textContent = allQuestionAnswers[ranqu][rananswer1] ;
+ answer1.textContent = allQuestionAnswers[ranqu][rananswer1];
  answer2.textContent = allQuestionAnswers[ranqu][rananswer2];
  answer3.textContent = allQuestionAnswers[ranqu][rananswer3];
  answer4.textContent = allQuestionAnswers[ranqu][rananswer4];
-
+     answer = answerList[ranqu];
+    notEqual()
 if(level == 0){
     back.style.display="block"
 }
-if(level == -1 || 0){
+if(level == -1 ){
     back.style.display="none"
 }
 if(level == 18){
@@ -570,10 +596,10 @@ level++
     rananswer3 = Math.floor(Math.random() * 4);
     rananswer4 = Math.floor(Math.random() * 4);
     random()
-
-ranqu = Math.floor(
-    Math.random()*220
-)
+ console.log(answer)
+if (yourAnswer.textContent == ""){
+    backup()
+}
 }
 
 
@@ -589,7 +615,7 @@ function BACKfUNCTION (){
     level--
         progres.textContent = `Level : ${level +1}/20`
 
-mainQuestion.textContent = questions[level]
+mainQuestion.textContent = questions[saves[level]]
 QuestionNum.textContent = `${level+1}.`
 
 if (randomPlace === 0) {
@@ -603,10 +629,10 @@ if (randomPlace === 0) {
 }
 
 
- answer1.textContent = allQuestionAnswers[level][rananswer1] ;
- answer2.textContent = allQuestionAnswers[level][rananswer2];
- answer3.textContent = allQuestionAnswers[level][rananswer3];
- answer4.textContent = allQuestionAnswers[level][rananswer4];
+ answer1.textContent = allQuestionAnswers[saves[level]][rananswer1] ;
+ answer2.textContent = allQuestionAnswers[saves[level]][rananswer2];
+ answer3.textContent = allQuestionAnswers[saves[level]][rananswer3];
+ answer4.textContent = allQuestionAnswers[saves[level]][rananswer4];
 
 
 
@@ -622,8 +648,9 @@ if (level == 0){
 
 function FINSHfUNCTION(){
     theResult.style.visibility="visible";
+   
 for (let i = 0; i < 20 ; i++){
-    if(userAnswers[i]== saves[answer]){
+    if(userAnswers[i]== answerList[saves[i]]){
         rightAnswers++
         correct.textContent = `correct answers : ${rightAnswers}`
     }else{

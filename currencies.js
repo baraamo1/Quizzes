@@ -43,10 +43,10 @@ let answer;
 let level = -1;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
-let answerList = ["Real", "Thailand", "Yen", "20", "Dollar", "Kuwait", "Hungary", "Swiss Franc", "Indian Rupee", "1", "Vietnam", "Lira", "Ruble", "Poland", "Krone", "Turkish Lira", "Euro", "Kazakhstan", "Rand", "South Africa"];
+let answerList = ["Real", "Thailand", "Yen", "20", "Dollar", "Kuwait", "Hungary", "Swiss Franc", "Indian Rupee", "8", "Vietnam", "Lira", "Ruble", "Poland", "Krone", "Turkish Lira", "Euro", "Kazakhstan", "Rand", "South Africa"];
 
 let progres = document.getElementById("progres");
-let allQuestionAnswers = [["Real", "Peso", "Ruble", "Rand"], ["Thailand", "Vietnam", "Cambodia", "Laos"], ["Yen", "Yuan", "Won", "Baht"], ["20", "18", "22", "25"], ["Dollar", "Euro", "Pound Sterling", "Yen"], ["Kuwait", "Bahrain", "United Kingdom", "Switzerland"], ["Hungary", "Poland", "Romania", "Czech Republic"], ["Swiss Franc", "Euro", "Krone", "Pound Sterling"], ["Indian Rupee", "Pakistani Rupee", "Nepalese Rupee", "Sri Lankan Rupee"], ["1", "2", "5", "10"], ["Vietnam", "Thailand", "China", "South Korea"], ["Lira", "Ruble", "Riyal", "Dirham"], ["Ruble", "Hryvnia", "Tenge", "Som"], ["Poland", "Hungary", "Czech Republic", "Slovakia"], ["Krone", "Krona", "Euro", "Franc"], ["Turkish Lira", "Euro", "Egyptian Pound", "Dirham"], ["Euro", "US Dollar", "Swiss Franc", "Pound Sterling"], ["Kazakhstan", "Uzbekistan", "Mongolia", "Kyrgyzstan"], ["Rand", "Real", "Ruble", "Riyal"], ["South Africa", "Namibia", "Botswana", "Zimbabwe"]];
+let allQuestionAnswers = [["Real", "Peso", "Ruble", "Rand"], ["Thailand", "Vietnam", "Cambodia", "Laos"], ["Yen", "Yuan", "Won", "Baht"], ["20", "18", "22", "25"], ["Dollar", "Euro", "Pound Sterling", "Yen"], ["Kuwait", "Bahrain", "United Kingdom", "Switzerland"], ["Hungary", "Poland", "Romania", "Czech Republic"], ["Swiss Franc", "Euro", "Krone", "Pound Sterling"], ["Indian Rupee", "Pakistani Rupee", "Nepalese Rupee", "Sri Lankan Rupee"], ["1", "2", "5", "8"], ["Vietnam", "Thailand", "China", "South Korea"], ["Lira", "Ruble", "Riyal", "Dirham"], ["Ruble", "Hryvnia", "Tenge", "Som"], ["Poland", "Hungary", "Czech Republic", "Slovakia"], ["Krone", "Krona", "Euro", "Franc"], ["Turkish Lira", "Euro", "Egyptian Pound", "Dirham"], ["Euro", "US Dollar", "Swiss Franc", "Pound Sterling"], ["Kazakhstan", "Uzbekistan", "Mongolia", "Kyrgyzstan"], ["Rand", "Real", "Ruble", "Riyal"], ["South Africa", "Namibia", "Botswana", "Zimbabwe"]];
 
 
 

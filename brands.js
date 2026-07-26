@@ -43,7 +43,7 @@ let answer;
 let level = -1;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
-let answerList = ["Apple", "Microsoft", "Meta", "Sony", "Google", "Samsung", "Meta", "Nintendo", "Microsoft", "Nike", "Nike", "Apple", "OpenAI", "Adobe", "Meta", "Google", "Amazon", "Microsoft", "ByteDance", "Microsoft"];
+let answerList = ["Apple", "Microsoft", "Meta", "Sony", "Google", "Samsung", "Google", "Nintendo", "Microsoft", "Nike", "Nike", "Apple", "OpenAI", "Adobe", "Meta", "Google", "Amazon", "Microsoft", "ByteDance", "Microsoft"];
 let progres = document.getElementById("progres");
 let allQuestionAnswers = [["Apple", "Samsung", "Google", "Huawei"], ["Microsoft", "Apple", "Google", "IBM"], ["Meta", "Snap", "Google", "X"], ["Sony", "Nintendo", "Microsoft", "Sega"], ["Google", "Microsoft", "Apple", "Yahoo"], ["Samsung", "Apple", "Xiaomi", "Huawei"], ["Meta", "Google", "Microsoft", "TikTok"], ["Nintendo", "Sony", "Sega", "Atari"], ["Microsoft", "Sony", "Nintendo", "Valve"], ["Nike", "Adidas", "Puma", "Reebok"], ["Puma", "Nike", "Adidas", "Under Armour"], ["Samsung", "Apple", "Google", "Microsoft"], ["OpenAI", "Google", "Anthropic", "Meta"], ["Adobe", "Corel", "Canva", "Autodesk"], ["Google", "Meta", "Telegram", "Apple"], ["Mozilla", "Opera", "Google", "Microsoft"], ["Amazon", "eBay", "Alibaba", "Walmart"], ["Google", "Microsoft", "Apple", "IBM"], ["ByteDance", "Tencent", "Meta", "Google"], ["Dell", "Microsoft", "HP", "Lenovo"]];
 

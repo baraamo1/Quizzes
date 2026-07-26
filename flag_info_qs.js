@@ -26,8 +26,7 @@ let questions = [
     "Which country's flag has a red and white design with two red bars and a maple leaf?",
     "Which country's flag has green, white, and red vertical stripes?",
     "Which country's flag features the Union Jack and stars representing the Southern Cross?",
-    "Which country's flag features an eagle in the center?", 
-    "Which country's flag is red with a white crescent and star?",
+    "Which country's flag features a golden eagle between three horizontal stripes?",    "Which country's flag is red with a white crescent and star?",
     "Which country's flag has a white cross on a red background?",
     "Which country's flag has a red dragon on a green and white background?",
     "Which country's flag has a blue, yellow, and red vertical tricolor?"

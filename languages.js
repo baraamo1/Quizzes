@@ -41,7 +41,7 @@ let answer;
 let level = -1;
 let QuestionNum = document.getElementById("qnum");
 let mainQuestion = document.getElementById("mainqs");
-let answerList = ["Portuguese", "Portuguese", "Japanese", "Korean", "German", "29", "Russian", "Spanish", "Swedish", "Persian", "67", "Arabic", "About 7,000", "Latin", "English", "Hungarian", "Hebrew", "11","Hindi","Mandarin Chinese"];
+let answerList = ["Portuguese", "Portuguese", "Japanese", "Korean", "German", "29", "Russian", "Spanish", "Swedish", "Persian", "67", "Arabic", "About 7,000", "Latin", "English", "Papua New Guinea", "Hebrew", "11","Hindi","Mandarin Chinese"];
 let progres = document.getElementById("progres");
 let allQuestionAnswers = [["Spanish", "Portuguese", "French", "Italian"], ["Portuguese", "Spanish", "French", "Italian"], ["Chinese", "Japanese", "Korean", "Thai"], ["Japanese", "Chinese", "Korean", "Vietnamese"], ["German", "Dutch", "Swedish", "Danish"], ["1", "25","29", "17"], ["Russian", "Ukrainian", "Bulgarian", "Serbian"], ["Portuguese", "Spanish", "Italian", "French"], ["Swedish", "Norwegian", "Danish", "Finnish"], ["Persian", "Arabic", "Turkish", "Urdu"], ["24", "34", "67", "55"], ["Arabic", "Hebrew", "Persian", "Turkish"], ["About 7,000", "About 3,000", "About 5,000", "About 10,000"], ["Latin", "Ancient Egyptian", "Sanskrit", "Old Norse"], ["English", "Mandarin Chinese", "Spanish", "Hindi"], ["India", "Indonesia", "Nigeria", "Papua New Guinea"], ["Arabic", "English", "French", "Russian"] ,["11", "3", "5", "8"],["Hindi", "Nepali", "Bengali", "Marathi"],["Mandarin Chinese", "English", "Spanish", "Hindi"]];
 
