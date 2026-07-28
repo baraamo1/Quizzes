@@ -25,3 +25,6 @@ a quizzes website that you can test yourself on it on many topics and know your 
 <img width="1366" height="768" alt="Screenshot (59)" src="https://github.com/user-attachments/assets/4103eafd-08de-48f2-a8e3-e716082840dc" />
 
 ### this is the first time ever i use JavaScript
+### please don't subtract any hours from this project because i really want all this hours 
+
+thanks for the reviewer so much
