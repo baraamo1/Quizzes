@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: hsl(0, 0%, 100%);
+}
+#navquizimg{
+    width: 70px;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between ;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-bottom: 3px solid;
+}
+.thebuttons{
+border: rgb(255, 255, 255) solid 2px;
+border-radius: 10px;
+padding: 7px 10px;
+cursor: pointer;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+font-size: 15px;
+font-weight: 700;
+transition: 0.3s;
+}
+.thebuttons:hover{
+    transform: scale(1.2);
+}
+.lungbut{
+    display: flex;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top:15px ;
+    margin-bottom: 15px;
+    transition: 0.3s;
+    padding: 10px;
+}
+.lungbut:hover{
+    background-color: #000000;
+    color: #fff;
+
+}
+#pp{
+    margin: 0%;
+
+}
+#languages{
+    background-color: rgb(255, 255, 255);
+    height: 34px;
+    width: fit-content;
+border-radius: 10px;
+padding: 7px 10px;
+cursor: pointer;
+background-color: rgb(0, 0, 0);
+color: rgb(255, 255, 255);
+font-size: 15px;
+font-weight: 700;
+transition: 0.3s;
+overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+#languages:hover{
+    background-color: rgb(255, 255, 255);
+    height: 150px;
+    color: #000;
+    border: #000 3px solid;
+}
+#eng{
+    background: #000;
+    color: #fff;
+}
+
+#firsth1{
+    text-align: center;
+}
+.allcat{
+    display: flex;  
+    flex-wrap: wrap;
+
+}
+.thecat{
+    border: 3px solid;
+    border-radius: 20px;
+    height:150px;
+    width:150px ;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 4px 4px 
+     ;
+    margin: 20px;
+    transition: 0.3s;
+}
+.thecat:hover{
+    transform: scale(1.1);
+}
+.thecat:active{
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+.catname{
+    text-align: center;
+    font-size: 24px;
+    margin: 0px;
+    
+
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+
+}
+.catimg{
+    width: 50px;
+    margin: 20px;
+}
