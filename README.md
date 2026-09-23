@@ -7,9 +7,9 @@ a quizzes website that you can test yourself on it on many topics and know your 
 - JavaScript
 ## AI used
  in this place i want to say everything i used ai on it without laying 
- first as it is my first time ever using JavaScript i used it to solve some problems but i didn't use it many , i was want to learn solving problems on my own so i didn't use it much
+ first as it is my first time ever using JavaScript i used it to solve some problems but i didn't use it many , i wanted to learn solving problems on my own so i didn't use it so much
  second as this website is a quizzes web i used it to make the questions because i don't have much experience on this topics 
- al other things i made it by myself
+ all other things i made it by myself
 
  ## why i made this website 
  the idea of this website has came when i started learning JavaScript so i decided to make it to improve myself on javascript
